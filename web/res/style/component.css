@@ -1,0 +1,184 @@
+.tabpage-panel-title {
+    opacity: 0;
+    font-size: 0;
+}
+
+.tabpage-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-middle);
+    padding: var(--gap-middle) 0;
+}
+
+.tabpage-nav-item {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-extra-small) var(--gap-middle);
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-radius: var(--border-radius-middle);
+    min-height: var(--height-top-nav);
+    min-width: calc(var(--font-size-base) * 8);
+    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    gap: var(--gap-extra-small);
+}
+
+.tabpage-nav-item:hover {
+    background-color: var(--color-general-glass);
+}
+
+.tabpage-nav-item:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-general-dark);
+}
+
+.tabpage-nav-item[aria-selected="true"] {
+    background-color: var(--color-main);
+    color: #ffffff;
+}
+
+.tabpage-nav-icon {
+    width: var(--icon-size-middle);
+    height: var(--icon-size-middle);
+    fill: var(--text-primary);
+    transition: fill 0.15s ease;
+    position: relative;
+    left: -2px;
+}
+
+.tabpage-nav-item[aria-selected="true"] .tabpage-nav-icon {
+    fill: #ffffff;
+}
+
+.tabpage-nav-label {
+    position: relative;
+    /* top: -1px; */
+}
+
+@media screen and (max-width: 760px) {
+    .tabpage-nav-item {
+        min-width: unset;
+    }
+}
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--gap-middle);
+    padding: var(--gap-large) 0;
+    height: var(--height-page-container);
+    overflow: auto;
+}
+
+
+.mcl-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-extra-small) var(--gap-middle);
+    font-size: var(--font-size-base);
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color-general);
+    border-radius: var(--border-radius-middle);
+    min-height: var(--height-component);
+    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.mcl-button:hover {
+    filter: brightness(1.05);
+}
+
+.mcl-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-general-dark);
+}
+
+.mcl-button:active {
+    filter: brightness(0.95);
+}
+
+.mcl-button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+
+
+.mcl-form-item {
+    width: min(calc(100% - var(--gap-large)), 600px);
+}
+
+.mcl-form-item + .mcl-form-item {
+    margin-top: var(--gap-small);
+}
+
+.mcl-form-item label {
+    color: var(--text-regular);
+    display: block;
+    padding: var(--gap-extra-small) 0;
+}
+
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+select {
+    width: 100%;
+    height: var(--height-component);
+    padding: var(--gap-small);
+    font-size: var(--font-size-base);
+    color: var(--input-color);
+    background-color: var(--input-bgcolor);
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius-small);
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+select:hover {
+    border-color: var(--color-general);
+    box-shadow: 0 0 0 2px var(--color-general-glass);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+select:focus {
+    border-color: var(--color-general);
+    box-shadow: 0 0 0 4px var(--color-general);
+}
+
+input[type="number"]:out-of-range,
+input[type="text"]:invalid {
+    border-color: var(--color-danger);
+    box-shadow: 0 0 0 4px var(--color-danger);
+}

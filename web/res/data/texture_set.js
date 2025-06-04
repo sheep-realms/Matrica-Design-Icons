@@ -1,0 +1,63 @@
+echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
+    {
+        file: 'player.png',
+        added_version: '1.0.0',
+        chars: {
+            '00': 'player',
+            '01': 'player alert',
+            '02': 'player arrow down',
+            '03': 'player arrow left',
+            '04': 'player arrow right',
+            '05': 'player arrow up',
+            '06': 'player point',
+            '07': 'player edit',
+            '08': 'player minus',
+            '09': 'player plus',
+            '0a': 'player remove',
+            '0b': 'player check',
+            '0c': 'player swap horizontal',
+            '0d': 'player swap vertical',
+            '0e': 'player clock',
+            '0f': 'player eye',
+
+            '10': 'player timer sand',
+            '11': 'player timer sand paused',
+            '12': 'player timer sand complete',
+            '13': 'player timer sand full',
+            '14': 'player cog',
+            '15': 'player filter',
+            '16': 'player heart',
+            '17': 'player key',
+            '18': 'player lock',
+            '19': 'player lock open',
+            '1a': 'player question',
+            '1b': 'player off',
+            '1c': 'player search',
+            '1d': 'player star',
+            '1e': 'player tag',
+            '1f': 'player voice',
+
+            '20': 'player wrench',
+            '21': 'player marker',
+
+            '30': 'player box',
+            '31': 'player box outline',
+            '32': 'player box edit',
+            '33': 'player box edit outline',
+            '34': 'player box minus',
+            '35': 'player box minus outline',
+            '36': 'player box plus',
+            '37': 'player box plus outline',
+            '38': 'player box multiple',
+            '39': 'player box multiple outline',
+            '3a': 'player badge',
+            '3b': 'player badge outline',
+            '3c': 'player badge alert',
+            '3d': 'player badge alert outline',
+            '3e': 'player badge horizontal',
+            '3f': 'player badge horizontal outline',
+
+            '40': 'target player'
+        }
+    }
+]);

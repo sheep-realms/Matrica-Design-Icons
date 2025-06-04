@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', 'Arial', sans-serif;
+}
+
+:root {
+    --color-main: rgb(64, 173, 235);
+    --color-main-dark: rgb(40, 144, 204);
+
+    --color-general: rgb(64, 173, 235);
+    --color-safe: rgb(69, 204, 56);
+    --color-warn: rgb(230, 189, 53);
+    --color-danger: rgb(230, 82, 89);
+    --color-special: rgb(171, 82, 203);
+
+    --color-general-dark: rgb(40, 144, 204);
+    --color-safe-dark: rgb(57, 163, 46);
+    --color-warn-dark: rgb(178, 146, 39);
+    --color-danger-dark: rgb(204, 61, 68);
+    --color-special-dark: rgb(147, 61, 178);
+
+    --color-general-glass: rgba(45, 147, 206, 0.12);
+    --color-safe-glass: rgba(69, 204, 56, 0.12);
+    --color-warn-glass: rgba(230, 189, 53, 0.12);
+    --color-danger-glass: rgba(230, 82, 89, 0.12);
+    --color-special-glass: rgba(147, 61, 178, 0.12);
+
+    --fh-border-coler: #AAAAAA;
+
+    --animation-speed: 0.5s;
+    --animation-speed-button-switch: 0.1s;
+
+    --font-size-base: 16px;
+    --font-size-title-1: 2rem;
+    --font-size-title-2: 1.75rem;
+    --font-size-title-3: 1.5rem;
+    --font-size-extra-large: 1.25rem;
+    --font-size-large: 1.125rem;
+    --font-size-middle: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-extra-small: 0.75rem;
+
+    --height-top-nav: calc(var(--font-size-base) * 2.25);
+    --height-menu-item: calc(var(--font-size-base) * 2.5);
+    --height-component: calc(var(--font-size-base) * 2.25);
+    --height-component-large: calc(var(--font-size-base) * 2.75);
+    --height-component-small: calc(var(--font-size-base) * 1.625);
+    --height-page-container: max(calc(100vh - var(--height-top-nav) - var(--gap-middle) * 2 - 300px), 400px);
+
+    --gap-extra-large: calc(var(--font-size-base) * 3);
+    --gap-large: calc(var(--font-size-base) * 2);
+    --gap-demi-large: calc(var(--font-size-base) * 1.5);
+    --gap-middle: var(--font-size-base);
+    --gap-demi-small: calc(var(--font-size-base) * 0.75);
+    --gap-small: calc(var(--font-size-base) * 0.5);
+    --gap-extra-small: calc(var(--font-size-base) * 0.25);
+
+    --icon-size-extra-large: calc(var(--font-size-base) * 2);
+    --icon-size-large: calc(var(--font-size-base) * 1.75);
+    --icon-size-middle: calc(var(--font-size-base) * 1.5);
+    --icon-size-small: calc(var(--font-size-base) * 1.25);
+    --icon-size-extra-small: var(--font-size-base);
+
+    --text-primary: #303133;
+    --text-regular: #606266;
+    --text-secondary: #909399;
+    --text-placeholder: #a8abb2;
+
+    --box-shadow: 0 2px 16px rgba(128, 128, 128, 0.35);
+
+    --page-bgcolor: #f8fafc;
+    --page-bgcolor-glass: rgba(250, 250, 250, 0.85);
+    --input-bgcolor: #FFFFFF;
+    --input-color: var(--text-primary);
+
+    --border-radius-small: 0.25rem;
+    --border-radius-middle: 0.5rem;
+    --border-radius-large: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #BEC1C6;
+        --text-regular: #9C9EA6;
+        --text-secondary: #747780;
+        --text-placeholder: #5B5E66;
+    
+        --border-color: #666666;
+        --box-shadow: 0 2px 16px rgba(128, 128, 128, 0.35);
+    
+        --page-bgcolor: #1E2129;
+        --page-bgcolor-glass: rgba(30, 33, 41, 0.85);
+        --input-bgcolor: #333740;
+        --input-color: var(--text-primary);
+    }
+}
+
+body {
+    background-color: var(--page-bgcolor);
+    font-size: var(--font-size-base);
+    box-sizing: border-box;
+    padding: 0 16px;
+}
+
+a {
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+}
+
+ul {
+    padding-left: 1.5em;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-regular {
+    color: var(--text-regular);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-placeholder {
+    color: var(--text-placeholder);
+}
+
+.w-full {
+    width: min(calc(100% - var(--gap-large)), 600px);
+}
+
+.text-center {
+    text-align: center;
+}

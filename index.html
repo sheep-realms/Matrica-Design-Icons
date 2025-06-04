@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Matrica Design Icons</title>
+    <link rel="stylesheet" href="web/res/style/common.css">
+    <link rel="stylesheet" href="web/res/style/component.css">
+    <script src="web/lib/jquery-3.7.1.min.js"></script>
+    <script src="web/res/class/LocalStorageManager.js"></script>
+    <script src="web/res/class/EchoLiveSystem.js"></script>
+    <script src="web/res/data/root.js"></script>
+    <script src="web/lang/index.js"></script>
+    <script src="web/res/class/Translator.js"></script>
+    <script id="translator-init">
+        const localStorageManager = new LocalStorageManager();
+
+        if (localStorageManager.getItem('config') === undefined) {
+            localStorageManager.setItem('config', {
+                language: 'zho-Hans'
+            });
+        }
+
+        const translator = new Translator(localStorageManager.getItem('config').language || 'zho-Hans');
+        const $t = function(...e) {
+            return translator.output(...e);
+        };
+        const $tc = function(...e) {
+            return translator.outputByTextComponent(...e);
+        };
+        translator.init('web/');
+    </script>
+    <script src="web/res/data/texture_set.js"></script>
+    <script src="web/res/data/icon.js"></script>
+    <script src="web/res/class/Icon.js"></script>
+    <script src="web/res/class/EchoLiveTools.js"></script>
+    <script src="web/res/class/DataFilter.js"></script>
+    <script src="web/res/class/Matrica.js"></script>
+    <script src="web/res/script/component.js"></script>
+</head>
+<body>
+    
+    <script src="web/res/script/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 34,
+    "description": "Matrica Design Icons",
+    "supported_formats": {
+      "min_inclusive": 4,
+      "max_inclusive": 63
+    }
+  }
+}
