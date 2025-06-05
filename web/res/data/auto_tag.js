@@ -1,0 +1,1 @@
+echoLiveSystem.registry.loadRegistry('auto_tag', 'name', []);

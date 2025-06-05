@@ -7,7 +7,7 @@
 
 
 class LocalStorageManager {
-    constructor(name = 'mancraft') {
+    constructor(name = 'matrica_design_icons') {
         this.name = name;
 
         this.init();

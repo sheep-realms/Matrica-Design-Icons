@@ -1,5 +1,11 @@
 echoLiveSystem.registry.init([
     {
+        name: 'auto_tag',
+        unique_key: 'name',
+        default_data: {
+            name: 'missingno'
+        }
+    }, {
         name: 'icon',
         unique_key: 'name',
         default_data: {

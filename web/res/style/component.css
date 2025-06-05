@@ -142,7 +142,7 @@ input[type="url"],
 select {
     width: 100%;
     height: var(--height-component);
-    padding: var(--gap-small);
+    padding: 0 var(--gap-small);
     font-size: var(--font-size-base);
     color: var(--input-color);
     background-color: var(--input-bgcolor);
@@ -181,4 +181,15 @@ input[type="number"]:out-of-range,
 input[type="text"]:invalid {
     border-color: var(--color-danger);
     box-shadow: 0 0 0 4px var(--color-danger);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
+input[type="search"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+select::placeholder {
+    color: var(--text-secondary);
 }

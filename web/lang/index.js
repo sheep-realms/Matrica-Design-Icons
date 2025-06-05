@@ -2,6 +2,11 @@ const lang_index = {
     main: "zho-Hans",
     index: [
         {
+            code: "eng",
+            code_ietf: "en",
+            title: "English",
+            url: "eng.js"
+        }, {
             code: "zho-Hans",
             code_ietf: "zh-Hans",
             title: "简体中文",

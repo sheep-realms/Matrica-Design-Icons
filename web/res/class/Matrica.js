@@ -33,6 +33,13 @@ class Matrica {
                     search: 'unicode'
                 }
             }, {
+                name: 'tag',
+                type: 'tag',
+                map: {
+                    value: 'tags',
+                    search: 'tag'
+                }
+            }, {
                 name: 'main',
                 type: 'string',
                 map: {
@@ -77,6 +84,14 @@ class Matrica {
                         added_version: e2.added_version || e.added_version
                     }
 
+                    if (Array.isArray(e?.tags)) {
+                        if (Array.isArray(e2?.tags)) {
+                            e2.tags = [...e.tags, ...e2.tags]
+                        } else {
+                            e2.tags = e.tags
+                        }
+                    }
+
                     this.icons.push(e2);
                 }
             }
@@ -93,10 +108,68 @@ class Matrica {
         return this.icons.find(icon => icon.name === name);
     }
 
+    getTextureSetByFileName(file) {
+        return this.textureSet.find(set => set.file === file);
+    }
+
     search(query) {
         if (!query || query.length < 1) {
             return this.icons;
         }
         return this.dataFilter.filter(query);
+    }
+}
+
+
+
+class MatricaComponent {
+    static iconBox(icon = {}, options = {}) {
+        icon = {
+            name: 'missingno',
+            unicode: 'e000',
+            file: 'missingno.png',
+            pos: {
+                x: 0,
+                y: 0,
+                ...icon.pos
+            },
+            ...icon
+        };
+
+        return `<button
+            class="icon-box"
+            data-icon-name="${icon.name}"
+            data-icon-unicode="${icon.unicode}"
+            data-icon-file="${icon.file}"
+        >
+            <div class="icon-image-box">
+                <div
+                    class="icon-image"
+                    style="--icon-pos-x: ${icon.pos.x}; --icon-pos-y: ${icon.pos.y}; background-image: url('assets/matrica/textures/font/${icon.file}');"
+                ></div>
+            </div>
+            <div class="icon-name">${icon.name}</div>
+        </button>`;
+    }
+
+    static iconBoxList(icons = [], options = {}) {
+        if (!Array.isArray(icons)) {
+            icons = [icons];
+        }
+
+        return icons.map(icon => MatricaComponent.iconBox(icon, options)).join('');
+    }
+
+    static nav(navList) {
+        return `<div class="icon-nav">
+            ${navList.map(e => MatricaComponent.navItem(e)).join('')}
+        </div>`;
+    }
+
+    static navItem(name) {
+        return `<button class="icon-nav-item" data-tag="${ name }">
+            <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
+            <span class="title">${ $t('nav.' + name) }</span>
+        </button>`;
     }
 }

@@ -1,0 +1,122 @@
+#icon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    justify-content: space-around;
+    gap: var(--gap-small);
+}
+
+.icon-box {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 130px;
+    font-size: var(--font-size-extra-small);
+    text-align: center;
+    box-sizing: border-box;
+    padding: var(--gap-middle);
+    cursor: pointer;
+    border-radius: var(--border-radius-middle);
+    gap: 4px;
+    border: unset;
+    background-color: transparent;
+}
+
+.icon-box:hover {
+    background-color: var(--color-general-glass);
+}
+
+
+
+.icon-box:active {
+    filter: brightness(0.8);
+}
+
+.icon-image-box {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-image {
+    --icon-preview-size: 48px;
+    --icon-size: 16px;
+    --icon-pos-x: 0;
+    --icon-pos-y: 0;
+    width: var(--icon-preview-size);
+    height: var(--icon-preview-size);
+    background-image: unset;
+    background-size: calc(100% * 16);
+    background-position-x: calc(var(--icon-pos-x) * -100%);
+    background-position-y: calc(var(--icon-pos-y) * -100%);
+    filter: invert(1);
+    image-rendering: pixelated;
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-image {
+        filter: brightness(0.9);
+    }
+}
+
+.icon-name {
+    height: 40px;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    color: var(--text-regular);
+}
+
+#icon-list-bottom {
+    height: 1px;
+}
+
+
+
+#nav-loading {
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.icon-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-nav-item {
+    appearance: none;
+    background-color: transparent;
+    border: unset;
+    display: flex;
+    height: var(--height-component);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--gap-small);
+    cursor: pointer;
+    font-size: var(--font-size-middle);
+    color: var(--text-primary);
+    gap: var(--gap-small);
+}
+
+.icon-nav-item .icon {
+    width: var(--icon-size-small);
+    height: var(--icon-size-small);
+    fill: var(--text-primary);
+}
+
+.icon-nav-item .title {
+    flex: 1;
+    text-align: left;
+}
+
+.icon-nav-item:hover {
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-general-glass);
+}
+
+.icon-nav-item:active {
+    filter: brightness(0.8);
+}

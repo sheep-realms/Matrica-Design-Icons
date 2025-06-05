@@ -417,7 +417,7 @@ class DataFilterConditions {
             return text;
         }
 
-        function __checkAllCondition(action) {
+        function __checkAllCondition(action, isAnd = false) {
             let r = true;
             for (let i = 0; i < search.length; i++) {
                 const e = search[i].value;
@@ -425,7 +425,8 @@ class DataFilterConditions {
                     for (let j = 0; j < e.length; j++) {
                         const e2 = e[j];
                         r = action(e2, value);
-                        if (r) break;
+                        if (!isAnd && r) break;
+                        if (isAnd && !r) break;
                     }
                 } else {
                     r = action(e, value);
@@ -445,6 +446,8 @@ class DataFilterConditions {
             return __checkAllCondition(__checkDateRange);
         } else if (condition.type === 'version') {
             return __checkAllCondition(__checkVersionRange);
+        } else if (condition.type === 'tag') {
+            return __checkAllCondition((s, v) => v.includes(s), true);
         }
         return true;
     }
