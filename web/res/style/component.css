@@ -80,56 +80,6 @@
 }
 
 
-.mcl-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--gap-extra-small) var(--gap-middle);
-    font-size: var(--font-size-base);
-    color: #ffffff;
-    cursor: pointer;
-    border: none;
-    background-color: var(--color-general);
-    border-radius: var(--border-radius-middle);
-    min-height: var(--height-component);
-    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.mcl-button:hover {
-    filter: brightness(1.05);
-}
-
-.mcl-button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 4px var(--color-general-dark);
-}
-
-.mcl-button:active {
-    filter: brightness(0.95);
-}
-
-.mcl-button[disabled] {
-    cursor: not-allowed;
-    opacity: 0.75;
-}
-
-
-
-.mcl-form-item {
-    width: min(calc(100% - var(--gap-large)), 600px);
-}
-
-.mcl-form-item + .mcl-form-item {
-    margin-top: var(--gap-small);
-}
-
-.mcl-form-item label {
-    color: var(--text-regular);
-    display: block;
-    padding: var(--gap-extra-small) 0;
-}
-
-
 
 
 input[type="text"],
@@ -192,4 +142,43 @@ input[type="tel"]::placeholder,
 input[type="url"]::placeholder,
 select::placeholder {
     color: var(--text-secondary);
+}
+
+
+
+.button {
+    --fill-bgcolor: var(--color-general);
+    --light-hover-bgcolor: var(--color-general-glass);
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    fill: var(--text-primary);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    height: var(--height-component-large);
+    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.button svg {
+    height: var(--height-component-small);
+    width: var(--height-component-small);
+}
+
+.button.button-danger {
+    --fill-bgcolor: var(--color-danger);
+    --light-hover-bgcolor: var(--color-danger-glass);
+}
+
+.button-circle {
+    border-radius: calc(var(--height-component-large) / 2);
+    height: var(--height-component-large);
+    width: var(--height-component-large);
+}
+
+.button-circle:hover {
+    background-color: var(--light-hover-bgcolor);
 }

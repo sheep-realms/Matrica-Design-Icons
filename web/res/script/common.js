@@ -41,10 +41,15 @@ function getIconList(offset = 0, limit = 100) {
 }
 
 function resetIconList() {
+    $('#icon-list').removeClass('waiting');
     $('#icon-list').html('');
     $('#icon-list-bottom').removeClass('hidden');
     AllIconHasShow = false;
     currentCount = 0;
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
     getIconList(0);
 }
 
@@ -84,9 +89,10 @@ $(document).on('click', '#nav-loading', function() {
 
 
 $(document).on('input', '#icon-search-input', function() {
+    $('#icon-list').addClass('waiting');
     debunce(() => {
         const searchValue = $(this).val().trim();
-        if (lastSearch === searchValue) return;
+        if (lastSearch === searchValue) return $('#icon-list').removeClass('waiting');;
         lastSearch = searchValue;
         iconList = matrica.search(searchValue);
         resetIconList();
@@ -107,6 +113,20 @@ $(document).on('input', '#select-language', function() {
     localStorageManager.setItem('config', config);
     location.reload();
 });
+
+$(document).on('click', '.icon-box', function() {
+    openIconDetailsDialog();
+});
+
+$(document).on('click', '#icon-details-dialog-close', function() {
+    $('#icon-details-dialog-mask').addClass('hidden');
+    $('body').removeClass('disable-scroll');
+});
+
+function openIconDetailsDialog() {
+    $('#icon-details-dialog-mask').removeClass('hidden');
+    $('body').addClass('disable-scroll');
+}
 
 
 const observer = new IntersectionObserver(entries => {

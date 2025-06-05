@@ -3,6 +3,11 @@
     grid-template-columns: repeat(auto-fill, 150px);
     justify-content: space-around;
     gap: var(--gap-small);
+    transition: opacity .3s;
+}
+
+#icon-list.waiting {
+    opacity: 0.35;
 }
 
 .icon-box {
@@ -22,13 +27,17 @@
     gap: 4px;
     border: unset;
     background-color: transparent;
+    animation: icon-box-join .3s ease-out 0s 1;
+}
+
+@keyframes icon-box-join {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .icon-box:hover {
     background-color: var(--color-general-glass);
 }
-
-
 
 .icon-box:active {
     filter: brightness(0.8);
@@ -72,6 +81,10 @@
 
 #icon-list-bottom {
     height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+    top: -20vh;
 }
 
 
@@ -119,4 +132,35 @@
 
 .icon-nav-item:active {
     filter: brightness(0.8);
+}
+
+
+
+#icon-details-dialog-mask {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dialog-mask-bgcolor);
+    z-index: 1000;
+}
+
+#icon-details-dialog {
+    width: min(1200px, calc(100vw - 32px));
+    height: 600px;
+    background-color: var(--input-bgcolor);
+    border-radius: var(--border-radius-middle);
+}
+
+.icon-details-dialog-header {
+    display: flex;
+    height: 88px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--gap-middle) var(--gap-large);
 }
