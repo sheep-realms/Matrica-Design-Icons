@@ -10,6 +10,8 @@
 
 const matrica = new Matrica();
 
+const notice = new SystemNotice();
+
 let debunceTimer = null;
 
 let iconList = matrica.icons;
@@ -76,13 +78,12 @@ $(document).ready(function() {
 
     translator.ready(() => {
         $('nav').html(MatricaComponent.nav(navItem));
+        $('body').append(MatricaComponent.iconDetailDialog());
     });
     
     setTimeout(() => {
         $('#nav-loading').text($t('notice.nav_loading_timeout', {}, 'The navigation took too much time to load, click here to reload!'));
     }, 1500);
-
-    $('body').append(MatricaComponent.iconDetailDialog());
 });
 
 $(document).on('click', '#nav-loading', function() {
@@ -101,11 +102,21 @@ $(document).on('input', '#icon-search-input', function() {
     })();
 });
 
+function setSearchTag(tag) {
+    let search = $('#icon-search-input').val().replace(DataFilter.REGEXP_CONDITION, '').trim();
+    $('#icon-search-input').val(`tag:${ tag } ${ search }`);
+    $('#icon-search-input').trigger('input');
+}
+
 $(document).on('click', '.icon-nav-item', function() {
     const tagName = $(this).data('tag');
-    let search = $('#icon-search-input').val().replace(DataFilter.REGEXP_CONDITION, '').trim();
-    $('#icon-search-input').val(`tag:${ tagName } ${ search }`);
-    $('#icon-search-input').trigger('input');
+    setSearchTag(tagName);
+});
+
+$(document).on('click', '.icon-detail-dialog-tag', function() {
+    const tagName = $(this).data('tag');
+    setSearchTag(tagName);
+    closeIconDetailDialog();
 });
 
 $(document).on('input', '#select-language', function() {
@@ -122,18 +133,60 @@ $(document).on('click', '.icon-box', function() {
     openIconDetailDialog(file, unicode);
 });
 
+$(document).on('click', '.input-copy-button-component .copy-button', function() {
+    const text = $(this).parent().children('input').eq(0).val();
+    setClipboard(text);
+});
+
 $(document).on('click', '#icon-detail-dialog-close', function() {
+    closeIconDetailDialog();
+});
+
+$(document).on('mousedown', '#icon-detail-dialog-mask', function(e) {
+    if (e.target !== this) return;
+    closeIconDetailDialog();
+});
+
+function closeIconDetailDialog() {
     $('#icon-detail-dialog-mask').addClass('hidden');
     $('body').removeClass('disable-scroll');
-});
+}
 
 function openIconDetailDialog(file, unicode) {
     const iconData = matrica.getIconByFileAndUnicode(file, unicode);
     if (!iconData) return;
 
+    const textComponent = `{"text":"\\u${ iconData.unicode }","font":"matrica:${ iconData.font_name }"}`;
+    const tellrowCommand = `/tellrow @a [${ textComponent },{"text":"Hello, world!","font":"minecraft:default"}]`;
+
     $('#icon-detail-dialog-title').text(iconData.name);
+    $('#icon-added-version-info').text($t('detail.added_version', { ver: iconData.added_version }));
+    $('#icon-preview-image').css('--icon-pos-x', iconData.pos.x);
+    $('#icon-preview-image').css('--icon-pos-y', iconData.pos.y);
+    $('#icon-preview-image').css('background-image', `url(assets/matrica/textures/font/${ iconData.file })`);
+    $('#output-text-component').val(textComponent);
+    $('#output-tellrow-command').val(tellrowCommand);
+    $('#icon-unicode-info .title').text(iconData.unicode);
+    $('#icon-font-name-info .title').text('matrica:' + iconData.font_name);
+    if (iconData.tags) $('#icon-detail-dialog-tag-list').html(MatricaComponent.iconDetailDialogTagList(iconData.tags));
+
     $('#icon-detail-dialog-mask').removeClass('hidden');
     $('body').addClass('disable-scroll');
+}
+
+function setClipboard(text) {
+    const type = "text/plain";
+    const blob = new Blob([text], { type });
+    const data = [new ClipboardItem({ [type]: blob })];
+
+    navigator.clipboard.write(data).then(
+        () => {
+            notice.sendT('notice.copy_success', {}, 'success');
+        },
+        () => {
+            notice.sendT('notice.copy_fail', {}, 'error');
+        }
+    );
 }
 
 

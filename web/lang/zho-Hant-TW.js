@@ -27,7 +27,20 @@ const lang_zho_Hant_TW = {
         player: "玩家",
         ticket: "票券"
     },
+    tag: {
+        card: "卡片",
+        file: "檔案",
+        player: "玩家",
+        ticket: "票券"
+    },
+    detail: {
+        added_version: "新增於 v{ver}",
+        tellrow_command: "/tellrow 指令",
+        text_component: "文字元件"
+    },
     notice: {
+        copy_fail: "複製失敗，請檢查瀏覽器設定！",
+        copy_success: "內容已複製！",
         loading: "載入中...",
         nav_loading_timeout: "載入導航欄花費了太多時間，點此過載！"
     }

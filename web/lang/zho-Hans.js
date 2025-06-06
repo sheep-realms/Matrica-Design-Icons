@@ -27,7 +27,20 @@ const lang_zho_Hans = {
         player: "玩家",
         ticket: "票券"
     },
+    tag: {
+        card: "卡片",
+        file: "文件",
+        player: "玩家",
+        ticket: "票券"
+    },
+    detail: {
+        added_version: "添加于 v{ver}",
+        tellrow_command: "/tellrow 命令",
+        text_component: "文本组件"
+    },
     notice: {
+        copy_fail: "复制失败，请检查浏览器设置！",
+        copy_success: "内容已复制！",
         loading: "加载中...",
         nav_loading_timeout: "加载导航栏花费了太多时间，点此重载！"
     }

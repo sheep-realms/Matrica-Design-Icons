@@ -27,7 +27,20 @@ const lang_eng = {
         player: "Player",
         ticket: "Ticket"
     },
+    tag: {
+        card: "Card",
+        file: "File",
+        player: "Player",
+        ticket: "Ticket"
+    },
+    detail: {
+        added_version: "Added in v{ver}",
+        tellrow_command: "/tellrow Command",
+        text_component: "Text Component"
+    },
     notice: {
+        copy_fail: "Copy failed, please check your browser settings!",
+        copy_success: "Copied text to clipboard!",
         loading: "Loading...",
         nav_loading_timeout: "The navigation took too much time to load, click here to reload!"
     }

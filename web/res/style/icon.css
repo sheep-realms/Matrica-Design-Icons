@@ -170,10 +170,17 @@
 
 .icon-detail-dialog-info-bar {
     background-color: var(--header-bgcolor);
-    height: 64px;
+    height: 48px;
     display: flex;
     align-items: center;
     padding: var(--gap-small) var(--gap-large);
+    gap: var(--gap-middle);
+    justify-content: space-between;
+}
+
+.icon-detail-dialog-info-bar>div {
+    display: flex;
+    gap: var(--gap-middle);
 }
 
 .icon-detail-dialog-content {
@@ -184,10 +191,11 @@
 }
 
 .icon-detail-dialog-content .image-wrapper {
-    width: 264px;
+    min-width: 264px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .icon-detail-dialog-content .icon-preview-wrapper {
@@ -213,7 +221,42 @@
 
 .icon-detail-dialog-content .action-wrapper {
     display: flex;
-    flex: 1;
+    flex: 2;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.icon-detail-dialog-content .text-component-example-wrapper {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-detail-dialog-content .text-component-example-wrapper label {
+    display: inline-block;
+    padding: var(--gap-small) 0;
+    color: var(--text-regular);
+}
+
+.input-copy-button-component {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-extra-small);
+}
+
+.text-component-example-item+.text-component-example-item {
+    margin-top: var(--gap-middle);
+}
+
+#icon-detail-dialog-tag-list {
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: var(--gap-middle) var(--gap-large) var(--gap-large);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--gap-small);
 }

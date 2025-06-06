@@ -81,7 +81,8 @@ class Matrica {
                             x: parseInt(key.substring(1,2), 16),
                             y: parseInt(key.substring(0,1), 16)
                         },
-                        added_version: e2.added_version || e.added_version
+                        added_version: e2.added_version || e.added_version,
+                        font_name: e2.font_name || e.file.split('.')[0]
                     }
 
                     if (Array.isArray(e?.tags)) {
@@ -182,27 +183,68 @@ class MatricaComponent {
             <div id="icon-detail-dialog">
                 <div class="icon-detail-dialog-header">
                     <h2 id="icon-detail-dialog-title">icon name</h2>
-                    <button id="icon-detail-dialog-close" class="button button-circle button-icon-only button-danger">
+                    <button id="icon-detail-dialog-close" class="button button-circle button-icon-only button-danger text-regular">
                         <span class="icon">${ Icon.getIcon('material:close') }</span>
                     </button>
                 </div>
                 <div class="icon-detail-dialog-info-bar">
-                    <button class="button button-circle button-fill">
-                        <span class="icon">${ Icon.getIcon('material:check') }</span>
-                        <span class="title">Added in vX.X.X</span>
-                    </button>
+                    <div class="left">
+                        <button class="button button-circle button-fill button-middle">
+                            <span class="icon">${ Icon.getIcon('material:check') }</span>
+                            <span id="icon-added-version-info" class="title">Added in vX.X.X</span>
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button id="icon-unicode-info" class="button button-circle button-middle button-glass" style="text-transform: uppercase;">
+                            <span class="title">e000</span>
+                        </button>
+                        <button id="icon-font-name-info" class="button button-circle button-middle button-glass">
+                            <span class="title">name</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="icon-detail-dialog-content">
                     <div class="image-wrapper">
                         <div class="icon-preview-wrapper">
-                            <div class="icon-image"></div>
+                            <div id="icon-preview-image" class="icon-image"></div>
                         </div>
                     </div>
                     <div class="action-wrapper">
-                        <input type="text" id="output-text-component" class="font-mono readonly" value="test" readonly>
+                        <div class="text-component-example-wrapper">
+                            <div class="text-component-example-item">
+                                <label for="output-text-component">${ $t('detail.text_component') }</label>
+                                <div class="input-copy-button-component">
+                                    <input type="text" id="output-text-component" class="font-mono readonly" value="" readonly>
+                                    <button class="copy-button button button-icon-only button-middle text-regular">
+                                        <span class="icon">${ Icon.getIcon('material:content-copy') }</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="text-component-example-item">
+                                <label for="output-tellrow-command">${ $t('detail.tellrow_command') }</label>
+                                <div class="input-copy-button-component">
+                                    <input type="text" id="output-tellrow-command" class="font-mono readonly" value="" readonly>
+                                    <button class="copy-button button button-icon-only button-middle text-regular">
+                                        <span class="icon">${ Icon.getIcon('material:content-copy') }</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div id="icon-detail-dialog-tag-list"></div>
             </div>
         </div>`;
+    }
+
+    static iconDetailDialogTagList(tags) {
+        return tags.map(tag => MatricaComponent.iconDetailDialogTag(tag)).join('');
+    }
+
+    static iconDetailDialogTag(tag) {
+        return `<button class="icon-detail-dialog-tag button button-circle button-fill button-middle" data-tag="${ tag }">
+            <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
+            <span id="icon-added-version-info" class="title">${ $t('tag.' + tag, {}, tag) }</span>
+        </button>`;
     }
 }
