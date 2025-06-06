@@ -19,4 +19,4 @@
 /tellrow @a [{"text":"\ue000","font":"matrica:player"},{"text":"Hello, world!","font":"minecraft:default"}]
 ```
 
-您可以访问本项目的[在线网页](https://sheep-realms.github.io/Material-Design-Icons/)或在浏览器中打开资源包随附的 `index.html` 文件即可浏览所有可用图标。
+您可以访问本项目的[在线网页](https://sheep-realms.github.io/Matrica-Design-Icons/)或在浏览器中打开资源包随附的 `index.html` 文件即可浏览所有可用图标。
