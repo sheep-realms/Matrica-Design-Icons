@@ -108,6 +108,10 @@ class Matrica {
         return this.icons.find(icon => icon.name === name);
     }
 
+    getIconByFileAndUnicode(file, unicode) {
+        return this.icons.find(icon => icon.file === file && icon.unicode === unicode);
+    }
+
     getTextureSetByFileName(file) {
         return this.textureSet.find(set => set.file === file);
     }
@@ -171,5 +175,34 @@ class MatricaComponent {
             <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
             <span class="title">${ $t('nav.' + name) }</span>
         </button>`;
+    }
+
+    static iconDetailDialog() {
+        return `<div id="icon-detail-dialog-mask" class="hidden">
+            <div id="icon-detail-dialog">
+                <div class="icon-detail-dialog-header">
+                    <h2 id="icon-detail-dialog-title">icon name</h2>
+                    <button id="icon-detail-dialog-close" class="button button-circle button-icon-only button-danger">
+                        <span class="icon">${ Icon.getIcon('material:close') }</span>
+                    </button>
+                </div>
+                <div class="icon-detail-dialog-info-bar">
+                    <button class="button button-circle button-fill">
+                        <span class="icon">${ Icon.getIcon('material:check') }</span>
+                        <span class="title">Added in vX.X.X</span>
+                    </button>
+                </div>
+                <div class="icon-detail-dialog-content">
+                    <div class="image-wrapper">
+                        <div class="icon-preview-wrapper">
+                            <div class="icon-image"></div>
+                        </div>
+                    </div>
+                    <div class="action-wrapper">
+                        <input type="text" id="output-text-component" class="font-mono readonly" value="test" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>`;
     }
 }

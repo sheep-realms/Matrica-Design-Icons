@@ -243,6 +243,10 @@ ul {
     overflow: hidden;
 }
 
+.font-mono {
+    font-family: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+}
+
 
 
 #version-tag {

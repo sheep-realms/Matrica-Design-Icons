@@ -144,13 +144,25 @@ select::placeholder {
     color: var(--text-secondary);
 }
 
+input[type="text"].readonly,
+input[type="email"].readonly,
+input[type="password"].readonly,
+input[type="number"].readonly,
+input[type="search"].readonly,
+input[type="tel"].readonly,
+input[type="url"].readonly,
+select.readonly {
+    background-color: var(--nav-bgcolor);
+}
+
 
 
 .button {
     --fill-bgcolor: var(--color-general);
     --light-hover-bgcolor: var(--color-general-glass);
+    --height: var(--height-component-large);
     appearance: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-base);
@@ -160,7 +172,15 @@ select::placeholder {
     border: none;
     background-color: transparent;
     height: var(--height-component-large);
+    padding: 0 var(--font-size-middle);
+    gap: var(--gap-extra-small);
     transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.button>span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button svg {
@@ -168,17 +188,39 @@ select::placeholder {
     width: var(--height-component-small);
 }
 
+.button.button-fill {
+    color: #FFF;
+    fill: #FFF;
+    background-color: var(--fill-bgcolor);
+}
+
 .button.button-danger {
     --fill-bgcolor: var(--color-danger);
     --light-hover-bgcolor: var(--color-danger-glass);
 }
 
-.button-circle {
-    border-radius: calc(var(--height-component-large) / 2);
-    height: var(--height-component-large);
-    width: var(--height-component-large);
+.button.button-circle {
+    border-radius: calc(var(--height) / 2);
+    height: var(--height);
 }
 
-.button-circle:hover {
+.button.button-icon-only {
+    width: var(--height);
+    padding: 0;
+}
+
+.button.button-circle:hover {
     background-color: var(--light-hover-bgcolor);
+}
+
+.button.button-fill:hover {
+    background-color: var(--fill-bgcolor);
+    filter: brightness(1.1);
+}
+
+.button:active,
+.button.button-circle:active,
+.button.button-fill:active {
+    filter: brightness(0.8);
+    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0s ease;
 }

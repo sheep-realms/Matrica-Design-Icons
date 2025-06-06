@@ -64,7 +64,7 @@ $(document).ready(function() {
     getIconList(0);
     observer.observe(document.getElementById('icon-list-bottom'));
 
-    $('#version-tag').text(APP_META.version);
+    $('#version-tag').text('v' + APP_META.version);
 
     // 初始化语言选项
     const language = localStorageManager.getItem('config').language;
@@ -81,6 +81,8 @@ $(document).ready(function() {
     setTimeout(() => {
         $('#nav-loading').text($t('notice.nav_loading_timeout', {}, 'The navigation took too much time to load, click here to reload!'));
     }, 1500);
+
+    $('body').append(MatricaComponent.iconDetailDialog());
 });
 
 $(document).on('click', '#nav-loading', function() {
@@ -115,16 +117,22 @@ $(document).on('input', '#select-language', function() {
 });
 
 $(document).on('click', '.icon-box', function() {
-    openIconDetailsDialog();
+    const unicode = $(this).data('icon-unicode');
+    const file = $(this).data('icon-file');
+    openIconDetailDialog(file, unicode);
 });
 
-$(document).on('click', '#icon-details-dialog-close', function() {
-    $('#icon-details-dialog-mask').addClass('hidden');
+$(document).on('click', '#icon-detail-dialog-close', function() {
+    $('#icon-detail-dialog-mask').addClass('hidden');
     $('body').removeClass('disable-scroll');
 });
 
-function openIconDetailsDialog() {
-    $('#icon-details-dialog-mask').removeClass('hidden');
+function openIconDetailDialog(file, unicode) {
+    const iconData = matrica.getIconByFileAndUnicode(file, unicode);
+    if (!iconData) return;
+
+    $('#icon-detail-dialog-title').text(iconData.name);
+    $('#icon-detail-dialog-mask').removeClass('hidden');
     $('body').addClass('disable-scroll');
 }
 

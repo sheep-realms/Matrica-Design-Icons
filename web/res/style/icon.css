@@ -53,7 +53,6 @@
 
 .icon-image {
     --icon-preview-size: 48px;
-    --icon-size: 16px;
     --icon-pos-x: 0;
     --icon-pos-y: 0;
     width: var(--icon-preview-size);
@@ -136,7 +135,7 @@
 
 
 
-#icon-details-dialog-mask {
+#icon-detail-dialog-mask {
     position: fixed;
     display: flex;
     align-items: center;
@@ -149,18 +148,72 @@
     z-index: 1000;
 }
 
-#icon-details-dialog {
+#icon-detail-dialog {
     width: min(1200px, calc(100vw - 32px));
-    height: 600px;
+    min-height: 600px;
     background-color: var(--input-bgcolor);
     border-radius: var(--border-radius-middle);
+    display: flex;
+    flex-direction: column;
+    color: var(--text-regular);
 }
 
-.icon-details-dialog-header {
+.icon-detail-dialog-header {
     display: flex;
     height: 88px;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     padding: var(--gap-middle) var(--gap-large);
+    color: var(--text-primary);
+}
+
+.icon-detail-dialog-info-bar {
+    background-color: var(--header-bgcolor);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: var(--gap-small) var(--gap-large);
+}
+
+.icon-detail-dialog-content {
+    flex: 1;
+    display: flex;
+    padding: var(--gap-small) var(--gap-large);
+    gap: var(--gap-large);
+}
+
+.icon-detail-dialog-content .image-wrapper {
+    width: 264px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-detail-dialog-content .icon-preview-wrapper {
+    width: 256px;
+    height: 256px;
+    background-color: #FFF;
+    background-image: repeating-conic-gradient(#EEE 0 25%, transparent 0 50%);
+    background-size: 32px 32px;
+    border: var(--color-general-glass) 4px solid;
+    background-clip: content-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-detail-dialog-content .icon-preview-wrapper {
+        background-color: #7F7F7F;
+        background-image: repeating-conic-gradient(#606060 0 25%, transparent 0 50%);
+    }
+}
+
+.icon-detail-dialog-content .icon-image {
+    --icon-preview-size: 256px;
+}
+
+.icon-detail-dialog-content .action-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
 }
