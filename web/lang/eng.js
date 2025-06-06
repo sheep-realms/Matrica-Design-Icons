@@ -35,7 +35,7 @@ const lang_eng = {
     },
     detail: {
         added_version: "Added in v{ver}",
-        tellrow_command: "/tellrow Command",
+        tellraw_command: "/tellraw Command",
         text_component: "Text Component"
     },
     notice: {

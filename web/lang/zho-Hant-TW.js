@@ -35,7 +35,7 @@ const lang_zho_Hant_TW = {
     },
     detail: {
         added_version: "新增於 v{ver}",
-        tellrow_command: "/tellrow 指令",
+        tellraw_command: "/tellraw 指令",
         text_component: "文字元件"
     },
     notice: {

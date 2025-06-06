@@ -157,7 +157,7 @@ function openIconDetailDialog(file, unicode) {
     if (!iconData) return;
 
     const textComponent = `{"text":"\\u${ iconData.unicode }","font":"matrica:${ iconData.font_name }"}`;
-    const tellrowCommand = `/tellrow @a [${ textComponent },{"text":"Hello, world!","font":"minecraft:default"}]`;
+    const tellrawCommand = `/tellraw @a [${ textComponent },{"text":"Hello, world!","font":"minecraft:default"}]`;
 
     $('#icon-detail-dialog-title').text(iconData.name);
     $('#icon-added-version-info').text($t('detail.added_version', { ver: iconData.added_version }));
@@ -165,7 +165,7 @@ function openIconDetailDialog(file, unicode) {
     $('#icon-preview-image').css('--icon-pos-y', iconData.pos.y);
     $('#icon-preview-image').css('background-image', `url(assets/matrica/textures/font/${ iconData.file })`);
     $('#output-text-component').val(textComponent);
-    $('#output-tellrow-command').val(tellrowCommand);
+    $('#output-tellraw-command').val(tellrawCommand);
     $('#icon-unicode-info .title').text(iconData.unicode);
     $('#icon-font-name-info .title').text('matrica:' + iconData.font_name);
     if (iconData.tags) $('#icon-detail-dialog-tag-list').html(MatricaComponent.iconDetailDialogTagList(iconData.tags));

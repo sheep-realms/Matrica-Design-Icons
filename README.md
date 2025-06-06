@@ -16,7 +16,7 @@
 本图标库利用了 Unicode 基本平面的私用区来填充图标，在安装资源包后，您可以轻松地在 Minecraft 中使用它：
 
 ``` text
-/tellrow @a [{"text":"\ue000","font":"matrica:player"},{"text":"Hello, world!","font":"minecraft:default"}]
+/tellraw @a [{"text":"\ue000","font":"matrica:player"},{"text":"Hello, world!","font":"minecraft:default"}]
 ```
 
 您可以访问本项目的[在线网页](https://sheep-realms.github.io/Matrica-Design-Icons/)或在浏览器中打开资源包随附的 `index.html` 文件即可浏览所有可用图标。

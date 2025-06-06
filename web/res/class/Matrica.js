@@ -221,9 +221,9 @@ class MatricaComponent {
                                 </div>
                             </div>
                             <div class="text-component-example-item">
-                                <label for="output-tellrow-command">${ $t('detail.tellrow_command') }</label>
+                                <label for="output-tellraw-command">${ $t('detail.tellraw_command') }</label>
                                 <div class="input-copy-button-component">
-                                    <input type="text" id="output-tellrow-command" class="font-mono readonly" value="" readonly>
+                                    <input type="text" id="output-tellraw-command" class="font-mono readonly" value="" readonly>
                                     <button class="copy-button button button-icon-only button-middle text-regular">
                                         <span class="icon">${ Icon.getIcon('material:content-copy') }</span>
                                     </button>
