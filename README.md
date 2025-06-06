@@ -5,10 +5,8 @@
 
 ## 版本说明
 
-| 名称 | 说明 |
-| - | - |
-| `Material Design Icons` | 为普通玩家提供的资源包。 |
-| `Material Design Icons DEV` | 为开发者提供的资源包，随附一个网页以供查询图标，您必须解压此压缩包才能使用网页。 |
+- **Material Design Icons** —— 为普通玩家提供的资源包。
+- **Material Design Icons DEV** —— 为开发者提供的资源包，随附一个网页以供查询图标，您必须解压此压缩包才能使用网页。
 
 
 ## 原理与使用方法
