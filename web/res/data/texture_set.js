@@ -1,7 +1,7 @@
 echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     {
         file: 'card.png',
-        added_version: '1.0.0',
+        added_version: '0.1.0',
         tags: ['card'],
         chars: {
             '00': 'card',
@@ -172,7 +172,7 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     },
     {
         file: 'file.png',
-        added_version: '1.0.0',
+        added_version: '0.1.0',
         tags: ['file'],
         chars: {
             '00': 'file',
@@ -309,7 +309,7 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     },
     {
         file: 'player.png',
-        added_version: '1.0.0',
+        added_version: '0.1.0',
         tags: ['player'],
         chars: {
             '00': 'player',
@@ -371,7 +371,7 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     },
     {
         file: 'ticket.png',
-        added_version: '1.0.0',
+        added_version: '0.1.0',
         tags: ['ticket'],
         chars: {
             '00': 'ticket',

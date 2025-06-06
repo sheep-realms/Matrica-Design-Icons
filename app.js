@@ -1,7 +1,7 @@
 const APP_META = {
     name: 'Echo-Matrica Design Icons',
-    version: '1.0.0',
-    isBeta: false
+    version: '0.1.0',
+    isBeta: true
 };
 
 if (typeof window !== 'undefined') {
