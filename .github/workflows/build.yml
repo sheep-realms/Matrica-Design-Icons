@@ -33,11 +33,11 @@ jobs:
     - name: Upload Release Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Matrica Design Icons"
+        name: "Matrica Design Icons ${{ github.run_number }}"
         path: dist
 
     - name: Upload DEV Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Matrica Design Icons DEV"
+        name: "Matrica Design Icons DEV ${{ github.run_number }}"
         path: dist-dev
