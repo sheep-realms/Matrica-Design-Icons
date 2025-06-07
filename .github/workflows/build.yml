@@ -30,14 +30,18 @@ jobs:
         mkdir dist-dev
         rsync -av --exclude-from='.buildignore-dev' ./ dist-dev/
 
+    - name: Rename pack-dev.png to pack.png
+      run: |
+        mv dist-dev/pack-dev.png dist-dev/pack.png
+
     - name: Upload Release Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Matrica Design Icons ${{ github.run_number }}"
+        name: "Matrica_Design_Icons_${{ github.run_number }}"
         path: dist
 
     - name: Upload DEV Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: "Matrica Design Icons DEV ${{ github.run_number }}"
+        name: "Matrica_Design_Icons_DEV_${{ github.run_number }}"
         path: dist-dev
