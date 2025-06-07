@@ -6,6 +6,8 @@
 .buildignore-dev
 web/*
 *.zip
+dist/*
+dist-dev/*
 index.html
 app.js
 LICENSE

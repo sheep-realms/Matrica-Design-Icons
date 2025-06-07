@@ -5,3 +5,5 @@
 .buildignore
 .buildignore-dev
 *.zip
+dist/*
+dist-dev/*
