@@ -8,7 +8,7 @@
         },
         {
             "type": "bitmap",
-            "file": "matrica_icons:font/test.png",
+            "file": "matrica:font/test.png",
 			"height": 8,
             "ascent": 7,
             "chars": [
