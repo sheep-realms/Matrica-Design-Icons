@@ -7,3 +7,4 @@
 *.zip
 dist/*
 dist-dev/*
+pack.png
