@@ -13,6 +13,14 @@ const matrica = new Matrica();
 const notice = new SystemNotice();
 
 let debunceTimer = null;
+let debunceTimerInside = null;
+
+const debunceTimerDetail = {
+    duration_min: 300,
+    duration_max: 1000,
+    growth_factor: 50,
+    stack: 0
+};
 
 let iconList = matrica.icons;
 let currentCount = 0;
@@ -58,11 +66,31 @@ function resetIconList() {
     observer.observe(document.getElementById('icon-list-bottom'));
 }
 
-function debunce(func, delay = 700) {
+// 防抖
+function debunce(func) {
     return function(...args) {
-        clearTimeout(debunceTimer);
+        interruptDebunce();
+        const delay = getDebunceDuration();
         debunceTimer = setTimeout(() => func.apply(this, args), delay);
+        debunceTimerInside = setTimeout(() => resetDubunce(), delay);
     };
+}
+
+function getDebunceDuration() {
+    return Math.min(
+        debunceTimerDetail.duration_min + (debunceTimerDetail.growth_factor * debunceTimerDetail.stack),
+        debunceTimerDetail.duration_max
+    );
+}
+
+function interruptDebunce() {
+    clearTimeout(debunceTimer);
+    clearTimeout(debunceTimerInside);
+    debunceTimerDetail.stack++;
+}
+
+function resetDubunce() {
+    debunceTimerDetail.stack = 0;
 }
 
 $(document).ready(function() {
