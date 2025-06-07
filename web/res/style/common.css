@@ -146,6 +146,15 @@ header .title-right {
     gap: var(--gap-middle);
 }
 
+header .search-bar {
+    display: flex;
+    gap: var(--gap-middle);
+}
+
+header .search-bar .icon-search-input {
+    flex: 1;
+}
+
 #select-language {
     width: 200px;
 }

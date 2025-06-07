@@ -84,6 +84,13 @@ $(document).ready(function() {
     setTimeout(() => {
         $('#nav-loading').text($t('notice.nav_loading_timeout', {}, 'The navigation took too much time to load, click here to reload!'));
     }, 1500);
+
+    $('#search-view').html(MatricaComponent.searchViewSelect());
+});
+
+$(document).on('click', '#search-view-select button', function() {
+    $('#icon-list').removeClass('view-compact-1 view-compact-2 view-compact-3');
+    $('#icon-list').addClass('view-compact-' + $(this).data('view'));
 });
 
 $(document).on('click', '#nav-loading', function() {
@@ -188,6 +195,21 @@ function setClipboard(text) {
         }
     );
 }
+
+/**
+ * 检查文本中是否包含完整的指定单词
+ * @param {string} text - 要搜索的文本
+ * @param {string} word - 要匹配的完整单词
+ * @param {boolean} [ignoreCase=false] - 是否忽略大小写
+ * @returns {boolean} - 是否匹配到完整的单词
+ */
+function containsWholeWord(text, word, ignoreCase = false) {
+    // 使用构造函数动态构造正则表达式，并转义特殊字符
+    const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const flags = ignoreCase ? 'gi' : 'g';
+    const regex = new RegExp(`\\b${escapedWord}\\b`, flags);
+    return regex.test(text);
+    }
 
 
 const observer = new IntersectionObserver(entries => {

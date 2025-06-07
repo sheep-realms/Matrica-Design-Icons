@@ -9,3 +9,8 @@ $(document).on('click', '.tabpage-nav .tabpage-nav-item:not(.disabled)', functio
     $(`.tabpage-centent[data-navid="${navid}"]>.tabpage-panel`).addClass('hidden');
     $(`.tabpage-centent[data-navid="${navid}"]>.tabpage-panel[data-pageid="${pageid}"]`).removeClass('hidden');
 });
+
+$(document).on('click', '.select-button .button:not([aria-selected="true"])', function() {
+    $(this).parent().children().attr('aria-selected', 'false');
+    $(this).attr('aria-selected', 'true');
+});

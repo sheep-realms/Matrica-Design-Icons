@@ -247,4 +247,12 @@ class MatricaComponent {
             <span id="icon-added-version-info" class="title">${ $t('tag.' + tag, {}, tag) }</span>
         </button>`;
     }
+
+    static searchViewSelect() {
+        return `<div id="search-view-select" class="select-button" role="tablist">
+            <button class="button button-middle button-icon-only" data-view="1" role="tab" aria-selected="true"><span class="icon">${ Icon.getIcon('material:view-grid') }</span></button>
+            <button class="button button-middle button-icon-only" data-view="2" role="tab" aria-selected="false"><span class="icon">${ Icon.getIcon('material:view-module') }</span></button>
+            <button class="button button-middle button-icon-only" data-view="3" role="tab" aria-selected="false"><span class="icon">${ Icon.getIcon('material:view-comfy') }</span></button>
+        </div>`;
+    }
 }

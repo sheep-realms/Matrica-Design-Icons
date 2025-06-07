@@ -178,7 +178,7 @@ select.readonly {
     padding: 0 var(--gap-middle);
     gap: var(--gap-extra-small);
     box-sizing: border-box;
-    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    transition: color 0.15s ease, fill 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
 .button>span {
@@ -259,11 +259,41 @@ select.readonly {
     filter: brightness(1.1);
 }
 
+.select-button {
+    display: flex;
+}
+
+.select-button .button {
+    --color: var(--fill-bgcolor);
+    background-color: var(--light-hover-bgcolor);
+    border-radius: 0;
+}
+
+.select-button .button[aria-selected="true"],
+.select-button .button[aria-selected="false"]:hover {
+    --color: #FFF;
+    background-color: var(--fill-bgcolor);
+}
+
+.select-button .button[aria-selected="true"]:hover {
+    --color: #FFF;
+    filter: brightness(1.1);
+}
+
+.select-button .button:first-child {
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+}
+
+.select-button .button:last-child {
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+}
+
 .button:active,
 .button.button-circle:active,
-.button.button-fill:active {
+.button.button-fill:active,
+.select-button .button[aria-selected="true"]:active {
     filter: brightness(0.8);
-    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0s ease;
+    transition: color 0.15s ease, fill 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0s ease;
 }
 
 

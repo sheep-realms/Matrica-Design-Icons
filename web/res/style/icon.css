@@ -28,6 +28,7 @@
     border: unset;
     background-color: transparent;
     animation: icon-box-join .3s ease-out 0s 1;
+    transition: background-color .15s;
 }
 
 @keyframes icon-box-join {
@@ -76,6 +77,38 @@
     overflow-wrap: break-word;
     text-overflow: ellipsis;
     color: var(--text-regular);
+}
+
+#icon-list.view-compact-2 {
+    grid-template-columns: repeat(auto-fill, 105px);
+}
+
+#icon-list.view-compact-2 .icon-box {
+    width: 105px;
+    font-size: 0.625rem;
+    padding: var(--gap-small);
+}
+
+#icon-list.view-compact-2 .icon-image {
+    --icon-preview-size: 32px;
+}
+
+#icon-list.view-compact-3 {
+    grid-template-columns: repeat(auto-fill, 60px);
+}
+
+#icon-list.view-compact-3 .icon-box {
+    width: 60px;
+    height: 60px;
+    padding: var(--gap-small);
+}
+
+#icon-list.view-compact-3 .icon-image {
+    --icon-preview-size: 32px;
+}
+
+#icon-list.view-compact-3 .icon-name {
+    display: none;
 }
 
 #icon-list-bottom {
@@ -146,6 +179,12 @@
     width: 100vw;
     background-color: var(--dialog-mask-bgcolor);
     z-index: 1000;
+    animation: icon-detail-dialog-show .15s ease-out 0s 1;
+}
+
+@keyframes icon-detail-dialog-show {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 #icon-detail-dialog {
