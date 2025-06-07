@@ -23,6 +23,7 @@ let lastSearch = '';
 const navItem = [
     'card',
     'file',
+    'mob',
     'player',
     'ticket'
 ];

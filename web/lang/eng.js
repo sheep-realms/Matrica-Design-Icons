@@ -24,12 +24,14 @@ const lang_eng = {
     nav: {
         card: "Card",
         file: "File",
+        mob: "Mob",
         player: "Player",
         ticket: "Ticket"
     },
     tag: {
         card: "Card",
         file: "File",
+        mob: "Mob",
         player: "Player",
         ticket: "Ticket"
     },

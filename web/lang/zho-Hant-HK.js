@@ -24,12 +24,14 @@ const lang_zho_Hant_HK = {
     nav: {
         card: "卡片",
         file: "文件",
+        mob: "生物",
         player: "玩家",
         ticket: "票券"
     },
     tag: {
         card: "卡片",
         file: "文件",
+        mob: "生物",
         player: "玩家",
         ticket: "票券"
     },

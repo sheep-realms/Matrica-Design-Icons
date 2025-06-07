@@ -308,11 +308,30 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
         }
     },
     {
+        file: 'mob.png',
+        added_version: '0.1.1',
+        tags: ['mob'],
+        chars: {
+            '00': 'creeper',
+            '01': 'skeleton',
+            '02': 'zombie',
+            '03': 'duardian',
+
+            '10': 'creeper box',
+            '11': 'creeper box outline',
+            '12': 'slime box',
+            '13': 'slime box outline'
+        }
+    },
+    {
         file: 'player.png',
         added_version: '0.1.0',
         tags: ['player'],
         chars: {
-            '00': 'player',
+            '00': {
+                name: 'player',
+                tags: ['mob'],
+            },
             '01': 'player alert',
             '02': 'player arrow down',
             '03': 'player arrow left',
