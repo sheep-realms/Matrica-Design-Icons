@@ -52,7 +52,9 @@ function resetIconList() {
         top: 0,
         behavior: 'smooth'
     });
+    observer.unobserve(document.getElementById('icon-list-bottom'));
     getIconList(0);
+    observer.observe(document.getElementById('icon-list-bottom'));
 }
 
 function debunce(func, delay = 700) {
@@ -221,5 +223,5 @@ const observer = new IntersectionObserver(entries => {
 }, {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0
 });
