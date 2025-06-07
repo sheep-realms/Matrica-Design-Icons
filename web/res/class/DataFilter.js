@@ -447,7 +447,7 @@ class DataFilterConditions {
         } else if (condition.type === 'version') {
             return __checkAllCondition(__checkVersionRange);
         } else if (condition.type === 'tag') {
-            return __checkAllCondition((s, v) => v.includes(s), true);
+            return __checkAllCondition((s, v) => v.includes(s));
         }
         return true;
     }
