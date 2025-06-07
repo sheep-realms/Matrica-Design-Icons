@@ -4,3 +4,4 @@
 .gitignore
 .buildignore
 .buildignore-dev
+*.zip
