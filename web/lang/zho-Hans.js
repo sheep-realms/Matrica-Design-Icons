@@ -23,17 +23,21 @@ const lang_zho_Hans = {
     },
     nav: {
         card: "卡片",
+        edit: "编辑 / 修改",
         file: "文件",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "视图"
     },
     tag: {
         card: "卡片",
+        edit: "编辑",
         file: "文件",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "视图"
     },
     detail: {
         added_version: "添加于 v{ver}",

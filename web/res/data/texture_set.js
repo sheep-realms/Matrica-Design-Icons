@@ -400,5 +400,59 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '04': 'ticket percent',
             '05': 'ticket percent outline'
         }
+    },
+    {
+        file: 'view.png',
+        added_version: '0.1.1',
+        tags: ['view'],
+        chars: {
+            '00': 'view agenda',
+            '01': 'view agenda outline',
+            '02': 'view array',
+            '03': 'view array outline',
+            '04': 'view carousel',
+            '05': 'view carousel outline',
+            '06': 'view column',
+            '07': 'view column outline',
+            '08': 'view compact',
+            '09': 'view compact outline',
+            '0a': 'view dashboard',
+            '0b': 'view dashboard outline',
+            '0c': 'view dashboard edit',
+            '0d': 'view dashboard edit outline',
+            '0e': 'view dashboard variant',
+            '0f': 'view dashboard variant outline',
+
+            '10': 'view day',
+            '11': 'view day outline',
+            '12': 'view gallery',
+            '13': 'view gallery outline',
+            '14': 'view grid',
+            '15': 'view grid outline',
+            '16': 'view grid minus',
+            '17': 'view grid minus outline',
+            '18': 'view grid plus',
+            '19': 'view grid plus outline',
+            '1a': 'view grid close',
+            '1b': 'view grid close outline',
+            '1c': 'view grid edit',
+            '1d': 'view grid edit outline',
+            '1e': 'view module',
+            '1f': 'view module outline',
+
+            '20': 'view parallel',
+            '21': 'view parallel outline',
+            '22': 'view quilt',
+            '23': 'view quilt outline',
+            '24': 'view sequential',
+            '25': 'view sequential outline',
+
+            '30': 'apps',
+            '31': 'view comfy',
+            '32': 'view headline',
+            '33': 'view list',
+            '34': 'view split horizontal',
+            '35': 'view split vertical'
+        }
     }
 ]);

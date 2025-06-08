@@ -30,10 +30,12 @@ let lastSearch = '';
 
 const navItem = [
     'card',
+    'edit',
     'file',
     'mob',
     'player',
-    'ticket'
+    'ticket',
+    'view'
 ];
 
 function getIconList(offset = 0, limit = 100) {
@@ -226,21 +228,6 @@ function setClipboard(text) {
         }
     );
 }
-
-/**
- * 检查文本中是否包含完整的指定单词
- * @param {string} text - 要搜索的文本
- * @param {string} word - 要匹配的完整单词
- * @param {boolean} [ignoreCase=false] - 是否忽略大小写
- * @returns {boolean} - 是否匹配到完整的单词
- */
-function containsWholeWord(text, word, ignoreCase = false) {
-    // 使用构造函数动态构造正则表达式，并转义特殊字符
-    const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const flags = ignoreCase ? 'gi' : 'g';
-    const regex = new RegExp(`\\b${escapedWord}\\b`, flags);
-    return regex.test(text);
-    }
 
 
 const observer = new IntersectionObserver(entries => {

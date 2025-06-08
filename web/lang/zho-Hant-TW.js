@@ -23,17 +23,21 @@ const lang_zho_Hant_TW = {
     },
     nav: {
         card: "卡片",
+        edit: "編輯 / 修改",
         file: "檔案",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "檢視"
     },
     tag: {
         card: "卡片",
+        edit: "編輯",
         file: "檔案",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "檢視"
     },
     detail: {
         added_version: "新增於 v{ver}",

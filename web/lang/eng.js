@@ -23,17 +23,21 @@ const lang_eng = {
     },
     nav: {
         card: "Card",
+        edit: "Edit / Modify",
         file: "File",
         mob: "Mob",
         player: "Player",
-        ticket: "Ticket"
+        ticket: "Ticket",
+        view: "View"
     },
     tag: {
         card: "Card",
+        edit: "Edit",
         file: "File",
         mob: "Mob",
         player: "Player",
-        ticket: "Ticket"
+        ticket: "Ticket",
+        view: "View"
     },
     detail: {
         added_version: "Added in v{ver}",

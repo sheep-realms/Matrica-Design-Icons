@@ -50,11 +50,13 @@ class Matrica {
             }
         ];
         this.dataFilter = null;
+        this.fastTag = [];
 
         this.init();
     }
 
     init() {
+        this.fastTag = echoLiveSystem.registry.getRegistryValue('auto_tag', 'fast_tag')?.tags || [];
         this.load();
         this.dataFilter = new DataFilter('', this.filterConditions, this.icons);
     }
@@ -103,10 +105,22 @@ class Matrica {
             if (a.name > b.name) return 1;
             return 0;
         });
+
+        this.fastTag.forEach(e => {
+            let icons = this.filterIconByName(e);
+            icons.forEach(e2 => {
+                e2.tags = [...e2.tags, e];
+            });
+        });
     }
 
     getIconByName(name) {
         return this.icons.find(icon => icon.name === name);
+    }
+
+    filterIconByName(word) {
+        if (!word) return this.icons;
+        return this.icons.filter(icon => this.containsWholeWord(icon.name, word));
     }
 
     getIconByFileAndUnicode(file, unicode) {
@@ -122,6 +136,20 @@ class Matrica {
             return this.icons;
         }
         return this.dataFilter.filter(query);
+    }
+
+    /**
+     * 检查文本中是否包含完整的指定单词
+     * @param {string} text - 要搜索的文本
+     * @param {string} word - 要匹配的完整单词
+     * @param {boolean} [ignoreCase=false] - 是否忽略大小写
+     * @returns {boolean} - 是否匹配到完整的单词
+     */
+    containsWholeWord(text, word, ignoreCase = false) {
+        const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const flags = ignoreCase ? 'gi' : 'g';
+        const regex = new RegExp(`\\b${escapedWord}\\b`, flags);
+        return regex.test(text);
     }
 }
 

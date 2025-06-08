@@ -23,17 +23,21 @@ const lang_zho_Hant_HK = {
     },
     nav: {
         card: "卡片",
+        edit: "編輯 / 修改",
         file: "文件",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "視圖"
     },
     tag: {
         card: "卡片",
+        edit: "編輯",
         file: "文件",
         mob: "生物",
         player: "玩家",
-        ticket: "票券"
+        ticket: "票券",
+        view: "視圖"
     },
     detail: {
         added_version: "添加於 v{ver}",
