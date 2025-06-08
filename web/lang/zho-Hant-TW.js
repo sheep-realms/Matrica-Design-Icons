@@ -23,6 +23,7 @@ const lang_zho_Hant_TW = {
     },
     nav: {
         card: "卡片",
+        code: "程式碼 / 圖形碼",
         edit: "編輯 / 修改",
         file: "檔案",
         mob: "生物",
@@ -32,6 +33,7 @@ const lang_zho_Hant_TW = {
     },
     tag: {
         card: "卡片",
+        code: "程式碼 / 圖形碼",
         edit: "編輯",
         file: "檔案",
         mob: "生物",

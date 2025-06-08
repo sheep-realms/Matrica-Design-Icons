@@ -30,6 +30,7 @@ let lastSearch = '';
 
 const navItem = [
     'card',
+    'code',
     'edit',
     'file',
     'mob',

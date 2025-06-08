@@ -23,6 +23,7 @@ const lang_zho_Hans = {
     },
     nav: {
         card: "卡片",
+        code: "代码 / 图形码",
         edit: "编辑 / 修改",
         file: "文件",
         mob: "生物",
@@ -32,6 +33,7 @@ const lang_zho_Hans = {
     },
     tag: {
         card: "卡片",
+        code: "代码 / 图形码",
         edit: "编辑",
         file: "文件",
         mob: "生物",

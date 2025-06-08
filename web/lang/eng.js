@@ -23,6 +23,7 @@ const lang_eng = {
     },
     nav: {
         card: "Card",
+        code: "Code",
         edit: "Edit / Modify",
         file: "File",
         mob: "Mob",
@@ -32,6 +33,7 @@ const lang_eng = {
     },
     tag: {
         card: "Card",
+        code: "Code",
         edit: "Edit",
         file: "File",
         mob: "Mob",
