@@ -187,6 +187,16 @@ $(document).on('click', '.input-copy-button-component .copy-button', function() 
     setClipboard(text);
 });
 
+$(document).on('click', '#icon-unicode-info', function() {
+    const text = $(this).text().trim();
+    setClipboard('\\u' + text);
+});
+
+$(document).on('click', '#icon-font-name-info', function() {
+    const text = $(this).text().trim();
+    setClipboard(text);
+});
+
 $(document).on('click', '#icon-detail-dialog-close', function() {
     closeIconDetailDialog();
 });
