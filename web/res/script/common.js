@@ -32,7 +32,10 @@ const navItem = [
     'card',
     'code',
     'edit',
-    'file',
+    {
+        name: 'file',
+        tag: 'file,folder'
+    },
     'mob',
     'player',
     'ticket',
@@ -145,7 +148,12 @@ $(document).on('input', '#icon-search-input', function() {
 
 function setSearchTag(tag) {
     let search = $('#icon-search-input').val().replace(DataFilter.REGEXP_CONDITION, '').trim();
-    $('#icon-search-input').val(`tag:${ tag } ${ search }`);
+    const tags = tag.split(',');
+    if (tags.length > 1) {
+        $('#icon-search-input').val(`tag:(${ tag }) ${ search }`);
+    } else {
+        $('#icon-search-input').val(`tag:${ tag } ${ search }`);
+    }
     $('#icon-search-input').trigger('input');
 }
 

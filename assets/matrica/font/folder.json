@@ -8,7 +8,7 @@
         },
         {
             "type": "bitmap",
-            "file": "matrica:font/code.png",
+            "file": "matrica:font/folder.png",
 			"height": 8,
             "ascent": 7,
             "chars": [

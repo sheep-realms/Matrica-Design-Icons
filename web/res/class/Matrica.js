@@ -107,7 +107,7 @@ class Matrica {
         });
 
         this.fastTag.forEach(e => {
-            let icons = this.filterIconByName(e);
+            let icons = this.filterIconByName(e, true);
             icons.forEach(e2 => {
                 e2.tags = [...e2.tags, e];
             });
@@ -118,9 +118,13 @@ class Matrica {
         return this.icons.find(icon => icon.name === name);
     }
 
-    filterIconByName(word) {
+    filterIconByName(word, filterTag = false) {
         if (!word) return this.icons;
-        return this.icons.filter(icon => this.containsWholeWord(icon.name, word));
+        if (filterTag) {
+            return this.icons.filter(icon => !icon.tags.includes(word) && this.containsWholeWord(icon.name, word));
+        } else {
+            return this.icons.filter(icon => this.containsWholeWord(icon.name, word));
+        }
     }
 
     getIconByFileAndUnicode(file, unicode) {
@@ -199,10 +203,16 @@ class MatricaComponent {
         </div>`;
     }
 
-    static navItem(name) {
-        return `<button class="icon-nav-item" data-tag="${ name }">
+    static navItem(navItem) {
+        if (typeof navItem === 'string') {
+            navItem = {
+                name: navItem,
+                tag: navItem
+            }
+        }
+        return `<button class="icon-nav-item" data-tag="${ navItem.tag }">
             <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
-            <span class="title">${ $t('nav.' + name) }</span>
+            <span class="title">${ $t('nav.' + navItem.name) }</span>
         </button>`;
     }
 
