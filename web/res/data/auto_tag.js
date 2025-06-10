@@ -4,6 +4,7 @@ echoLiveSystem.registry.loadRegistry('auto_tag', 'name', [
         tags: [
             'code',
             'edit',
+            'file',
             'player'
         ]
     }

@@ -37,6 +37,7 @@ const lang_zho_Hans = {
         edit: "编辑",
         file: "文件",
         folder: "文件夹",
+        math: "数学",
         mob: "生物",
         player: "玩家",
         ticket: "票券",

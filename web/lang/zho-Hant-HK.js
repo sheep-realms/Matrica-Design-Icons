@@ -37,6 +37,7 @@ const lang_zho_Hant_HK = {
         edit: "編輯",
         file: "文件",
         folder: "文件夾",
+        math: "數學",
         mob: "生物",
         player: "玩家",
         ticket: "票券",
