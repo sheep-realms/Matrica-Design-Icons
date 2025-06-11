@@ -37,6 +37,7 @@ const lang_zho_Hant_TW = {
         edit: "編輯",
         file: "檔案",
         folder: "資料夾",
+        form: "表單",
         math: "數學",
         mob: "生物",
         player: "玩家",

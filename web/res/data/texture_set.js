@@ -4,8 +4,8 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
         added_version: '0.1.0',
         tags: ['card'],
         chars: {
-            '00': 'card',
-            '01': 'card outline',
+            '00': { name: 'card', tags: ['form']},
+            '01': { name: 'card outline', tags: ['form']},
             '02': 'card badge',
             '03': 'card badge outline',
             '04': 'card edit',

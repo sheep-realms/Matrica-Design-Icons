@@ -37,6 +37,7 @@ const lang_eng = {
         edit: "Edit",
         file: "File",
         folder: "Folder",
+        form: "Form",
         math: "Math",
         mob: "Mob",
         player: "Player",
