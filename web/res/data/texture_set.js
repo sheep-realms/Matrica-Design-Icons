@@ -366,6 +366,8 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '83': { name: 'file table outline', added_version: '0.1.1' },
             '84': { name: 'file link', added_version: '0.1.1' },
             '85': { name: 'file link outline', added_version: '0.1.1' },
+            '86': { name: 'file creeper', added_version: '0.1.2' },
+            '87': { name: 'file creeper outline', added_version: '0.1.2' },
 
             'f0': 'file compare',
             'f1': 'file hidden',
@@ -476,6 +478,9 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '5d': 'folder network outline',
             '5e': 'folder off',
             '5f': 'folder off outline',
+
+            '60': { name: 'folder creeper', added_version: '0.1.2' },
+            '61': { name: 'folder creeper outline', added_version: '0.1.2' },
 
             'f0': 'folder hidden'
         }
