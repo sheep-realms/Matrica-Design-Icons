@@ -26,6 +26,7 @@ const lang_eng = {
         code: "Code",
         edit: "Edit / Modify",
         file: "File / Folder",
+        food: "Food / Drink",
         mob: "Mob",
         player: "Player",
         ticket: "Ticket",
@@ -34,6 +35,7 @@ const lang_eng = {
     tag: {
         card: "Card",
         code: "Code",
+        drink: "Drink",
         edit: "Edit",
         file: "File",
         folder: "Folder",

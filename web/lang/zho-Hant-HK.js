@@ -26,6 +26,7 @@ const lang_zho_Hant_HK = {
         code: "代碼 / 圖形碼",
         edit: "編輯 / 修改",
         file: "文件 / 文件夾",
+        food: "食物 / 飲料",
         mob: "生物",
         player: "玩家",
         ticket: "票券",
@@ -34,6 +35,7 @@ const lang_zho_Hant_HK = {
     tag: {
         card: "卡片",
         code: "代碼 / 圖形碼",
+        drink: "飲料",
         edit: "編輯",
         file: "文件",
         folder: "文件夾",

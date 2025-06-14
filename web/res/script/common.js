@@ -36,6 +36,10 @@ const navItem = [
         name: 'file',
         tag: 'file,folder'
     },
+    {
+        name: 'food',
+        tag: 'food,drink'
+    },
     'mob',
     'player',
     'ticket',

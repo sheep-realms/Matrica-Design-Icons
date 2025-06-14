@@ -220,6 +220,32 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
         }
     },
     {
+        file: 'drink.png',
+        added_version: '0.1.2',
+        tags: ['drink'],
+        chars: {
+            '00': 'cup',
+            '01': 'cup outline',
+            '02': 'cup off',
+            '03': 'cup off outline',
+            '04': 'beer',
+            '05': 'beer outline',
+            '06': 'bottle soda',
+            '07': 'bottle soda outline',
+            '08': 'bottle soda classic',
+            '09': 'bottle soda classic outline',
+            '0a': 'coffee',
+            '0b': 'coffee outline',
+            '0c': 'coffee off',
+            '0d': 'coffee off outline',
+            '0e': 'tea',
+            '0f': 'tea outline',
+
+            '10': 'bottle wine',
+            '11': 'bottle wine outline'
+        }
+    },
+    {
         file: 'file.png',
         added_version: '0.1.0',
         tags: ['file'],
