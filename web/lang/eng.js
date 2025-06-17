@@ -40,6 +40,7 @@ const lang_eng = {
         file: "File",
         folder: "Folder",
         form: "Form",
+        furniture: "Furniture",
         math: "Math",
         mob: "Mob",
         player: "Player",

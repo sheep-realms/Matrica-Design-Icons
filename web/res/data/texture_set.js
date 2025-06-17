@@ -242,7 +242,28 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '0f': 'tea outline',
 
             '10': 'bottle wine',
-            '11': 'bottle wine outline'
+            '11': 'bottle wine outline',
+            '12': { name: 'coffee maker', tags: ['furniture'] },
+            '13': { name: 'coffee maker outline', tags: ['furniture'] },
+            '14': { name: 'coffee maker check', tags: ['furniture'] },
+            '15': { name: 'coffee maker check outline', tags: ['furniture'] },
+            '16': 'glass cocktail',
+            '17': 'glass cocktail off',
+            '18': 'glass mug',
+            '19': 'glass mug off',
+            '1a': 'glass mug variant',
+            '1b': 'glass mug variant off',
+            '1c': 'glass stange',
+            '1d': 'glass wine',
+            '1e': 'glass bottle',
+            '1f': 'glass bottle outline',
+
+            '20': 'glass bottle off',
+            '21': 'glass bottle off outline',
+            '22': 'plastic cup',
+            '23': 'plastic cup outline',
+            '24': 'plastic cup multiple',
+            '25': 'plastic cup multiple outline'
         }
     },
     {

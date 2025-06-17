@@ -40,6 +40,7 @@ const lang_zho_Hant_HK = {
         file: "文件",
         folder: "文件夾",
         form: "表單",
+        furniture: "傢俱",
         math: "數學",
         mob: "生物",
         player: "玩家",
