@@ -141,9 +141,23 @@ header .title-bar {
     flex-wrap: wrap;
 }
 
+header .title-left {
+    display: flex;
+    gap: var(--gap-demi-small);
+    align-items: center;
+}
+
 header .title-right {
     display: flex;
     gap: var(--gap-middle);
+}
+
+header #title-logo {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    background-image: url(../../assets/logo.png);
+    background-size: 100%;
 }
 
 header .search-bar {
