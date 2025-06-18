@@ -533,6 +533,29 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
         }
     },
     {
+        file: 'food.png',
+        added_version: '0.1.2',
+        tags: ['food'],
+        chars: {
+            '00': { name: 'food', tags: ['drink'] },
+            '01': { name: 'food outline', tags: ['drink'] },
+            '02': { name: 'food off', tags: ['drink'] },
+            '03': { name: 'food off outline', tags: ['drink'] },
+            '04': 'food apple',
+            '05': 'food apple outline',
+            '06': 'egg',
+            '07': 'egg outline',
+            '08': 'egg off',
+            '09': 'egg off outline',
+            '0a': 'egg fried',
+            '0b': 'cupcake',
+            '0c': 'candy',
+            '0d': 'candy outline',
+            '0e': 'candy off',
+            '0f': 'candy off outline'
+        }
+    },
+    {
         file: 'mob.png',
         added_version: '0.1.1',
         tags: ['mob'],

@@ -39,6 +39,7 @@ const lang_eng = {
         edit: "Edit",
         file: "File",
         folder: "Folder",
+        food: "Food",
         form: "Form",
         furniture: "Furniture",
         math: "Math",

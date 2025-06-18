@@ -39,6 +39,7 @@ const lang_zho_Hant_TW = {
         edit: "編輯",
         file: "檔案",
         folder: "資料夾",
+        food: "食物",
         form: "表單",
         furniture: "傢俱",
         math: "數學",

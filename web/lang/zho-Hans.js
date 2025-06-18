@@ -39,6 +39,7 @@ const lang_zho_Hans = {
         edit: "编辑",
         file: "文件",
         folder: "文件夹",
+        food: "食物",
         form: "表单",
         furniture: "家具",
         math: "数学",
