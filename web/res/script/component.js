@@ -14,3 +14,10 @@ $(document).on('click', '.select-button .button:not([aria-selected="true"])', fu
     $(this).parent().children().attr('aria-selected', 'false');
     $(this).attr('aria-selected', 'true');
 });
+
+$(document).ready(calcElementSize);
+$(window).resize(calcElementSize);
+
+function calcElementSize() {
+    $('body').css('--calc-height-title-bar', $('.title-bar').height() + 'px');
+}

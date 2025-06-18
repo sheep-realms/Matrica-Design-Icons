@@ -121,6 +121,28 @@
 
 
 
+@media screen and (max-width: 768px) {
+    #icon-list {
+        grid-template-columns: repeat(auto-fill, 60px) !important;
+    }
+
+    #icon-list .icon-box {
+        width: 60px !important;
+        height: 60px !important;
+        padding: var(--gap-small) !important;
+    }
+
+    #icon-list .icon-image {
+        --icon-preview-size: 32px !important;
+    }
+
+    #icon-list .icon-name {
+        display: none !important;
+    }
+}
+
+
+
 #nav-loading {
     color: var(--text-secondary);
     cursor: pointer;
@@ -209,17 +231,19 @@
 
 .icon-detail-dialog-info-bar {
     background-color: var(--header-bgcolor);
-    height: 48px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     padding: var(--gap-small) var(--gap-large);
     gap: var(--gap-middle);
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .icon-detail-dialog-info-bar>div {
     display: flex;
     gap: var(--gap-middle);
+    flex-wrap: wrap;
 }
 
 .icon-detail-dialog-content {
@@ -298,4 +322,48 @@
     justify-content: center;
     align-items: flex-start;
     gap: var(--gap-small);
+}
+
+@media screen and (max-width: 768px) {
+    #icon-detail-dialog-mask {
+        align-items: flex-start;
+        overflow: auto;
+    }
+
+    .icon-detail-dialog-header {
+        padding: var(--gap-small) var(--gap-middle);
+    }
+
+    #icon-detail-dialog-title {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    #icon-detail-dialog {
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .icon-detail-dialog-info-bar {
+        justify-content: center;
+        gap: var(--gap-small);
+        padding: var(--gap-middle) var(--gap-middle);
+    }
+
+    .icon-detail-dialog-info-bar>div {
+        gap: var(--gap-small);
+    }
+
+    .icon-detail-dialog-content {
+        flex-direction: column;
+        gap: var(--gap-middle);
+        padding: var(--gap-middle) var(--gap-middle);
+    }
+
+    #icon-detail-dialog-tag-list {
+        padding: var(--gap-middle) var(--gap-middle) var(--gap-large);
+        min-height: unset;
+    }
 }
