@@ -29,6 +29,7 @@ let AllIconHasShow = false;
 let lastSearch = '';
 
 const navItem = [
+    'agriculture',
     'card',
     'code',
     'edit',
@@ -232,6 +233,7 @@ function openIconDetailDialog(file, unicode) {
     $('#icon-unicode-info .title').text(iconData.unicode);
     $('#icon-font-name-info .title').text('matrica:' + iconData.font_name);
     if (iconData.tags) $('#icon-detail-dialog-tag-list').html(MatricaComponent.iconDetailDialogTagList(iconData.tags));
+    if (iconData.alias) $('#icon-detail-dialog-tag-list').append(MatricaComponent.iconDetailDialogAliasList(iconData.alias));
 
     $('#icon-detail-dialog-mask').removeClass('hidden');
     $('body').addClass('disable-scroll');

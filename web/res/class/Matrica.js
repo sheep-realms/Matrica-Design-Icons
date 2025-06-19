@@ -44,7 +44,8 @@ class Matrica {
                 type: 'string',
                 map: {
                     value: [
-                        'name'
+                        'name',
+                        'alias_search'
                     ]
                 }
             }
@@ -93,6 +94,10 @@ class Matrica {
                         } else {
                             e2.tags = e.tags
                         }
+                    }
+
+                    if (Array.isArray(e2?.alias)) {
+                        e2.alias_search = e2.alias.join('\ue000')
                     }
 
                     this.icons.push(e2);
@@ -282,7 +287,7 @@ class MatricaComponent {
     static iconDetailDialogTag(tag) {
         return `<button class="icon-detail-dialog-tag button button-circle button-fill button-middle" data-tag="${ tag }">
             <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
-            <span id="icon-added-version-info" class="title">${ $t('tag.' + tag, {}, tag) }</span>
+            <span class="title">${ $t('tag.' + tag, {}, tag) }</span>
         </button>`;
     }
 
@@ -292,5 +297,16 @@ class MatricaComponent {
             <button class="button button-middle button-icon-only" data-view="2" role="tab" aria-selected="false"><span class="icon">${ Icon.getIcon('material:view-module') }</span></button>
             <button class="button button-middle button-icon-only" data-view="3" role="tab" aria-selected="false"><span class="icon">${ Icon.getIcon('material:view-comfy') }</span></button>
         </div>`;
+    }
+
+    static iconDetailDialogAliasList(alias) {
+        return alias.map(a => MatricaComponent.iconDetailDialogAlias(a)).join('');
+    }
+
+    static iconDetailDialogAlias(alias) {
+        return `<button class="icon-detail-dialog-alias button button-circle button-middle button-glass" data-tag="${ alias }">
+            <span class="icon">${ Icon.getIcon('material:dots-horizontal') }</span>
+            <span class="title">${ alias }</span>
+        </button>`;
     }
 }

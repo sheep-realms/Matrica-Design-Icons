@@ -22,6 +22,7 @@ const lang_zho_Hans = {
         search_placeholder: "搜索图标...（仅支持英文）"
     },
     nav: {
+        agriculture: "农业",
         card: "卡片",
         code: "代码 / 图形码",
         edit: "编辑 / 修改",
@@ -33,6 +34,7 @@ const lang_zho_Hans = {
         view: "视图"
     },
     tag: {
+        agriculture: "农业",
         card: "卡片",
         code: "代码 / 图形码",
         drink: "饮料",

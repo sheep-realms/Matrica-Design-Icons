@@ -22,6 +22,7 @@ const lang_eng = {
         search_placeholder: "Search Icons..."
     },
     nav: {
+        agriculture: "Agriculture",
         card: "Card",
         code: "Code",
         edit: "Edit / Modify",
@@ -33,6 +34,7 @@ const lang_eng = {
         view: "View"
     },
     tag: {
+        agriculture: "Agriculture",
         card: "Card",
         code: "Code",
         drink: "Drink",

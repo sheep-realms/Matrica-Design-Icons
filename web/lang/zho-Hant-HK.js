@@ -22,6 +22,7 @@ const lang_zho_Hant_HK = {
         search_placeholder: "搜索圖標...（僅支持英文）"
     },
     nav: {
+        agriculture: "農業",
         card: "卡片",
         code: "代碼 / 圖形碼",
         edit: "編輯 / 修改",
@@ -33,6 +34,7 @@ const lang_zho_Hant_HK = {
         view: "視圖"
     },
     tag: {
+        agriculture: "農業",
         card: "卡片",
         code: "代碼 / 圖形碼",
         drink: "飲料",
