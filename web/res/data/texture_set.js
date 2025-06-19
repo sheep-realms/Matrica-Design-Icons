@@ -569,7 +569,20 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '1c': { name: 'chili mild', tags: ['agriculture'], alias: ['chilli mild', 'pepper', 'spicy'] },
             '1d': { name: 'chili medium', alias: ['chilli medium', 'pepper', 'spicy'] },
             '1e': { name: 'chili hot', alias: ['chilli hot', 'pepper', 'spicy'] },
-            '1f': { name: 'chili off', alias: ['chilli off', 'pepper', 'spicy'] }
+            '1f': { name: 'chili off', alias: ['chilli off', 'pepper', 'spicy'] },
+
+            '20': { name: 'carrot', tags: ['agriculture'], added_version: '0.1.3' },
+            '21': { name: 'food hot dog', alias: ['food weiner', 'food frankfurter'], added_version: '0.1.3' },
+            '22': { name: 'hamburger', added_version: '0.1.3' },
+            '23': { name: 'hamburger off', added_version: '0.1.3' },
+            '24': { name: 'hamburger minus', added_version: '0.1.3' },
+            '25': { name: 'hamburger plus', added_version: '0.1.3' },
+            '26': { name: 'hamburger remove', added_version: '0.1.3' },
+            '27': { name: 'hamburger plus', added_version: '0.1.3' },
+            '28': { name: 'muffin', added_version: '0.1.3' },
+            '29': { name: 'pizza', alias: ['pizzeria'], added_version: '0.1.3' },
+            '2a': { name: 'fruit grapes', added_version: '0.1.3' },
+            '2b': { name: 'fruit watermelon', added_version: '0.1.3' }
         }
     },
     {
