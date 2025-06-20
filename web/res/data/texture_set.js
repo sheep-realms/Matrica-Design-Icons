@@ -582,7 +582,35 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '28': { name: 'muffin', added_version: '0.1.3' },
             '29': { name: 'pizza', alias: ['pizzeria'], added_version: '0.1.3' },
             '2a': { name: 'fruit grapes', added_version: '0.1.3' },
-            '2b': { name: 'fruit watermelon', added_version: '0.1.3' }
+            '2b': { name: 'fruit watermelon', added_version: '0.1.3' },
+            '2c': { name: 'cheese', added_version: '0.1.3' },
+            '2d': { name: 'cheese off', added_version: '0.1.3' },
+            '2e': { name: 'cookie', alias: ['biscuit'], added_version: '0.1.3' },
+            '2f': { name: 'cookie outline', alias: ['biscuit outline'], added_version: '0.1.3' },
+
+            '30': { name: 'cookie alert', alias: ['biscuit alert'], added_version: '0.1.3' },
+            '31': { name: 'cookie alert outline', alias: ['biscuit alert outline'], added_version: '0.1.3' },
+            '32': { name: 'cookie minus', alias: ['biscuit minus'], added_version: '0.1.3' },
+            '33': { name: 'cookie minus outline', alias: ['biscuit minus outline'], added_version: '0.1.3' },
+            '34': { name: 'cookie plus', alias: ['biscuit plus'], added_version: '0.1.3' },
+            '35': { name: 'cookie plus outline', alias: ['biscuit plus outline'], added_version: '0.1.3' },
+            '36': { name: 'cookie remove', alias: ['biscuit remove'], added_version: '0.1.3' },
+            '37': { name: 'cookie remove outline', alias: ['biscuit remove outline'], added_version: '0.1.3' },
+            '38': { name: 'cookie check', alias: ['biscuit check'], added_version: '0.1.3' },
+            '39': { name: 'cookie check outline', alias: ['biscuit check outline'], added_version: '0.1.3' },
+            '3a': { name: 'cookie edit', alias: ['biscuit edit'], added_version: '0.1.3' },
+            '3b': { name: 'cookie edit outline', alias: ['biscuit edit outline'], added_version: '0.1.3' },
+            '3c': { name: 'cookie lock', alias: ['biscuit lock'], added_version: '0.1.3' },
+            '3d': { name: 'cookie lock outline', alias: ['biscuit lock outline'], added_version: '0.1.3' },
+            '3e': { name: 'cookie lock oepn', alias: ['biscuit lock oepn'], added_version: '0.1.3' },
+            '3f': { name: 'cookie lock oepn outline', alias: ['biscuit lock oepn outline'], added_version: '0.1.3' },
+
+            '40': { name: 'cookie cog', alias: ['biscuit cog'], added_version: '0.1.3' },
+            '41': { name: 'cookie cog outline', alias: ['biscuit cog outline'], added_version: '0.1.3' },
+            '42': { name: 'cookie refresh', alias: ['biscuit refresh'], added_version: '0.1.3' },
+            '43': { name: 'cookie refresh outline', alias: ['biscuit refresh outline'], added_version: '0.1.3' },
+            '44': { name: 'cookie off', alias: ['biscuit off'], added_version: '0.1.3' },
+            '45': { name: 'cookie off outline', alias: ['biscuit off outline'], added_version: '0.1.3' }
         }
     },
     {
