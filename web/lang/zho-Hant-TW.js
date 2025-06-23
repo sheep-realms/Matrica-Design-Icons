@@ -23,6 +23,7 @@ const lang_zho_Hant_TW = {
     },
     nav: {
         agriculture: "農業",
+        block: "方塊",
         card: "卡片",
         code: "程式碼 / 圖形碼",
         edit: "編輯 / 修改",
@@ -35,6 +36,7 @@ const lang_zho_Hant_TW = {
     },
     tag: {
         agriculture: "農業",
+        block: "方塊",
         card: "卡片",
         code: "程式碼 / 圖形碼",
         drink: "飲料",

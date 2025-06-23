@@ -1,5 +1,24 @@
 echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     {
+        file: 'block.png',
+        added_version: '0.1.2',
+        tags: ['block'],
+        chars: {
+            '00': 'crafting table',
+            '01': 'crafting table outline',
+            '02': 'grass block',
+            '03': 'grass block outline',
+            '04': 'furnace',
+            '05': 'furnace outline',
+            '06': 'chest',
+            '07': 'chest outline',
+            '08': 'tnt',
+            '09': 'tnt outline',
+            '0a': 'block bricks',
+            '0b': 'block bricks outline'
+        }
+    },
+    {
         file: 'card.png',
         added_version: '0.1.0',
         tags: ['card'],

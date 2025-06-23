@@ -23,6 +23,7 @@ const lang_zho_Hans = {
     },
     nav: {
         agriculture: "农业",
+        block: "方块",
         card: "卡片",
         code: "代码 / 图形码",
         edit: "编辑 / 修改",
@@ -35,6 +36,7 @@ const lang_zho_Hans = {
     },
     tag: {
         agriculture: "农业",
+        block: "方块",
         card: "卡片",
         code: "代码 / 图形码",
         drink: "饮料",

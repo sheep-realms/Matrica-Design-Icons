@@ -23,6 +23,7 @@ const lang_eng = {
     },
     nav: {
         agriculture: "Agriculture",
+        block: "Block",
         card: "Card",
         code: "Code",
         edit: "Edit / Modify",
@@ -35,6 +36,7 @@ const lang_eng = {
     },
     tag: {
         agriculture: "Agriculture",
+        block: "Block",
         card: "Card",
         code: "Code",
         drink: "Drink",

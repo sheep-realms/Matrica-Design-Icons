@@ -30,6 +30,7 @@ let lastSearch = '';
 
 const navItem = [
     'agriculture',
+    'block',
     'card',
     'code',
     'edit',
