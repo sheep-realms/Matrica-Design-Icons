@@ -1,7 +1,7 @@
 echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
     {
         file: 'block.png',
-        added_version: '0.1.2',
+        added_version: '0.1.3',
         tags: ['block'],
         chars: {
             '00': 'crafting table',
