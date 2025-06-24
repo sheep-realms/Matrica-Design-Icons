@@ -4,8 +4,8 @@
 
 Matrica Design Icons 项目采用双协议授权，具体授权范围如下：
 
-- Matrica Design Icons —— 仅包含实现本项目所提供的完整的 Minecraft 资源包所需的最小必要资产，包括但不限于图像、JSON、MCMETA 文件。
-- Matrica Design Icons DEV：该项目的所有文件，特指实现网页服务功能的资产，包括但不限于 HTML、CSS、JavaScript 文件。该范围内可被上述授权范围覆盖的资产，可通过上述授权范围所使用的协议授权。
+- **Matrica Design Icons** —— 指构建一个功能完整、可正常使用的 Minecraft 资源包所必需的最小资产集，包括但不限于图像、JSON、MCMETA 文件等。该授权范围不适用于仅提取部分资产或构建内容缺失以此绕过授权条款的情形。
+- **Matrica Design Icons DEV** —— 指该项目用于实现网页服务功能的全部文件，包括但不限于 HTML、CSS、JavaScript 等前端资产。若其中部分文件同时属于上文所描述的构建资源包所必需的最小资产集，则该部分可依据资源包授权协议使用。
 
 
 ## Matrica Design Icons
