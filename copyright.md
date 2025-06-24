@@ -19,6 +19,14 @@ Matrica Design Icons DEV 是自由软件，您可以依据自由软件基金会�
 
 Matrica Design Icons DEV 发表时预期有用，但对此无任何保证；亦无隐含的可以销售或适合特定目的的保证。详情请见 GNU 公众授权协议。
 
+Matrica Design Icons DEV 包含有并非以 GNU 公众授权协议共享的美术资源，这些资源的版权信息将在下文列出。
+
+## 美术资源版权信息
+
+| 名称 | 作者 | 授权协议 |
+| - | - | - |
+| [Material Design Icons](https://pictogrammers.com/library/mdi/) | [Pictogrammers](https://pictogrammers.com/) | [Apache License 2.0](https://apache.org/licenses/LICENSE-2.0) |
+
 ### 开源组件声明
 
 | 名称 | 授权协议 |
