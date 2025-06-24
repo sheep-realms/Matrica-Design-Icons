@@ -49,7 +49,7 @@ const navItem = [
         name: 'license',
         type: 'link',
         icon: 'material:license',
-        url: 'https://github.com/sheep-realms/Matrica-Design-Icons/blob/master/LICENSE'
+        url: 'https://github.com/sheep-realms/Matrica-Design-Icons/blob/master/copyright.md'
     },
     {
         name: 'categories',
