@@ -169,7 +169,6 @@ header .search-bar {
 header .search-bar .icon-search-input {
     flex: 1;
 }
-
 @media screen and (max-width: 768px) {
     #main-content-card {
         border-radius: 0;
@@ -267,10 +266,6 @@ nav {
     box-sizing: border-box;
 }
 
-footer {
-    height: 300px;
-}
-
 a {
     color: var(--color-main);
     text-decoration: none;
@@ -279,6 +274,26 @@ a {
 a:hover {
     text-decoration: underline;
     text-underline-offset: 0.125em;
+}
+
+footer {
+    min-height: 300px;
+}
+
+footer .footer-body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--gap-large) var(--gap-middle);
+    display: flex;
+    flex-direction: column;
+    color: var(--text-regular);
+    text-align: right;
+    gap: var(--gap-middle);
+    box-sizing: border-box;
+}
+
+footer a {
+    color: var(--text-regular);
 }
 
 ul {

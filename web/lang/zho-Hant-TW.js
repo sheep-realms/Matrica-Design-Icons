@@ -22,6 +22,11 @@ const lang_zho_Hant_TW = {
         search_placeholder: "搜尋圖示...（僅支援英文）"
     },
     nav: {
+        new_in_version: "於 v{ver} 中新增",
+        releases: "發行版本",
+        release_list: "版本列表",
+        license: "授權協議",
+        categories: "分類",
         agriculture: "農業",
         block: "方塊",
         card: "卡片",
@@ -62,6 +67,9 @@ const lang_zho_Hant_TW = {
         copy_success: "內容已複製！",
         loading: "載入中...",
         nav_loading_timeout: "載入導航欄花費了太多時間，點此過載！"
+    },
+    footer: {
+        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> 和 <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">其他貢獻者們</a>'
     }
 };
 

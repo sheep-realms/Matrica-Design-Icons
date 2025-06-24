@@ -22,6 +22,11 @@ const lang_eng = {
         search_placeholder: "Search Icons..."
     },
     nav: {
+        new_in_version: "New in v{ver}",
+        releases: "releases",
+        release_list: "Release List",
+        license: "License",
+        categories: "Categories",
         agriculture: "Agriculture",
         block: "Block",
         card: "Card",
@@ -62,6 +67,9 @@ const lang_eng = {
         copy_success: "Copied text to clipboard!",
         loading: "Loading...",
         nav_loading_timeout: "The navigation took too much time to load, click here to reload!"
+    },
+    footer: {
+        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> and <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">other contributors</a>'
     }
 };
 

@@ -215,10 +215,43 @@ class MatricaComponent {
                 tag: navItem
             }
         }
-        return `<button class="icon-nav-item" data-tag="${ navItem.tag }">
-            <span class="icon">${ Icon.getIcon('material:tag-outline') }</span>
-            <span class="title">${ $t('nav.' + navItem.name) }</span>
+        navItem = {
+            name: 'missingno',
+            name_var: {},
+            type: 'item',
+            tag: 'missingno',
+            icon: 'material:tag-outline',
+            search: undefined,
+            ...navItem
+        };
+
+        if (navItem.type === 'group') return MatricaComponent.navGroupTitle(navItem);
+        if (navItem.type === 'link') return MatricaComponent.navLink(navItem);
+
+        return `<button
+            class="icon-nav-item"
+            ${ navItem.search ? `data-search="${ navItem.search }"` : `data-tag="${ navItem.tag }"` }
+        >
+            <span class="icon">${ Icon.getIcon(navItem.icon) }</span>
+            <span class="title">${ $t('nav.' + navItem.name, navItem.name_var) }</span>
         </button>`;
+    }
+
+    static navGroupTitle(navItem) {
+        return `<div class="icon-nav-group-title">${ $t('nav.' + navItem.name, navItem.name_var) }</div>`;
+    }
+
+    static navLink(navItem) {
+        navItem = {
+            url: '#',
+            ...navItem
+        }
+        return `<a class="icon-nav-item-link" href="${ navItem.url }" target="_blank">
+            <button class="icon-nav-item">
+                <span class="icon">${ Icon.getIcon(navItem.icon) }</span>
+                <span class="title">${ $t('nav.' + navItem.name, navItem.name_var) }</span>
+            </button>
+        </a>`;
     }
 
     static iconDetailDialog() {

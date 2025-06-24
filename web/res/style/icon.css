@@ -166,6 +166,16 @@
     font-size: var(--font-size-middle);
     color: var(--text-primary);
     gap: var(--gap-small);
+    transition: background-color .15s;
+}
+
+.icon-nav-item-link {
+    display: flex;
+    text-decoration: none !important;
+}
+
+.icon-nav-item-link>.icon-nav-item {
+    flex: 1;
 }
 
 .icon-nav-item .icon {
@@ -186,6 +196,14 @@
 
 .icon-nav-item:active {
     filter: brightness(0.8);
+}
+
+.icon-nav-group-title {
+    text-transform: uppercase;
+    margin-top: var(--gap-middle);
+    padding: var(--gap-small) var(--gap-small);
+    color: var(--text-regular);
+    font-size: var(--font-size-small);
 }
 
 

@@ -29,6 +29,32 @@ let AllIconHasShow = false;
 let lastSearch = '';
 
 const navItem = [
+    {
+        name: 'new_in_version',
+        name_var: { ver: APP_META.version },
+        icon: 'material:creation',
+        search: `added:${ APP_META.version }`
+    },
+    {
+        name: 'releases',
+        type: 'group'
+    },
+    {
+        name: 'release_list',
+        type: 'link',
+        icon: 'material:source-commit',
+        url: 'https://github.com/sheep-realms/Matrica-Design-Icons/releases'
+    },
+    {
+        name: 'license',
+        type: 'link',
+        icon: 'material:license',
+        url: 'https://github.com/sheep-realms/Matrica-Design-Icons/blob/master/LICENSE'
+    },
+    {
+        name: 'categories',
+        type: 'group'
+    },
     'agriculture',
     'block',
     'card',
@@ -122,6 +148,7 @@ $(document).ready(function() {
     translator.ready(() => {
         $('nav').html(MatricaComponent.nav(navItem));
         $('body').append(MatricaComponent.iconDetailDialog());
+        $('#footer-copyright').html($t('footer.copyright'));
     });
     
     setTimeout(() => {
@@ -152,6 +179,14 @@ $(document).on('input', '#icon-search-input', function() {
     })();
 });
 
+// 填充搜索条件
+function setSearch(str) {
+    let search = $('#icon-search-input').val().replace(DataFilter.REGEXP_CONDITION, '').trim();
+    $('#icon-search-input').val(`${ str } ${ search }`);
+    $('#icon-search-input').trigger('input');
+}
+
+// 填充搜索标签
 function setSearchTag(tag) {
     let search = $('#icon-search-input').val().replace(DataFilter.REGEXP_CONDITION, '').trim();
     const tags = tag.split(',');
@@ -164,8 +199,10 @@ function setSearchTag(tag) {
 }
 
 $(document).on('click', '.icon-nav-item', function() {
+    const search = $(this).data('search');
+    if (search) return setSearch(search);
     const tagName = $(this).data('tag');
-    setSearchTag(tagName);
+    if (tagName) return setSearchTag(tagName);
 });
 
 $(document).on('click', '.icon-detail-dialog-tag', function() {
