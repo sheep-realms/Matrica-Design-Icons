@@ -2,10 +2,10 @@
 
 版权所有 © [Sheep-realms](https://github.com/sheep-realms) 和 [GitHub 项目 sheep-realms/Matrica-Design-Icons 上的贡献者们](https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors)。
 
-Matrica Design Icons 采用双协议授权，具体授权范围如下：
+Matrica Design Icons 项目采用双协议授权，具体授权范围如下：
 
-- Matrica Design Icons —— 仅包含实现 Minecraft 资源包的最小必要资产，包括但不限于图像、JSON、MCMETA 文件。
-- Matrica Design Icons DEV：该项目的所有文件，特指实现网页服务功能的资产，包括但不限于 HTML、CSS、JavaScript 文件。
+- Matrica Design Icons —— 仅包含实现本项目所提供的完整的 Minecraft 资源包所需的最小必要资产，包括但不限于图像、JSON、MCMETA 文件。
+- Matrica Design Icons DEV：该项目的所有文件，特指实现网页服务功能的资产，包括但不限于 HTML、CSS、JavaScript 文件。该范围内可被上述授权范围覆盖的资产，可通过上述授权范围所使用的协议授权。
 
 
 ## Matrica Design Icons
