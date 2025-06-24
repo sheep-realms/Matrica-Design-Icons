@@ -20,3 +20,8 @@
 ```
 
 您可以访问本项目的[在线网页](https://sheep-realms.github.io/Matrica-Design-Icons/)或在浏览器中打开资源包随附的 `index.html` 文件即可浏览所有可用图标。
+
+
+## 另见
+
+- [授权协议与声明](copyright.md)
