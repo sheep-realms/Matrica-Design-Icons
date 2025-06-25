@@ -36,6 +36,7 @@ const lang_zho_Hant_TW = {
         food: "食物 / 飲料",
         mob: "生物",
         player: "玩家",
+        science: "科學",
         ticket: "票券",
         view: "檢視"
     },
@@ -54,6 +55,7 @@ const lang_zho_Hant_TW = {
         math: "數學",
         mob: "生物",
         player: "玩家",
+        science: "科學",
         ticket: "票券",
         view: "檢視"
     },

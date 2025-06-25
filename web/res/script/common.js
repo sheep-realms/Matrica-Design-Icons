@@ -70,6 +70,7 @@ const navItem = [
     },
     'mob',
     'player',
+    'science',
     'ticket',
     'view'
 ];

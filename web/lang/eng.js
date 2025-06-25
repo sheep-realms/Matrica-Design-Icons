@@ -36,6 +36,7 @@ const lang_eng = {
         food: "Food / Drink",
         mob: "Mob",
         player: "Player",
+        science: "Science",
         ticket: "Ticket",
         view: "View"
     },
@@ -54,6 +55,7 @@ const lang_eng = {
         math: "Math",
         mob: "Mob",
         player: "Player",
+        science: "Science",
         ticket: "Ticket",
         view: "View"
     },

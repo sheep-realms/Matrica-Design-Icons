@@ -36,6 +36,7 @@ const lang_zho_Hans = {
         food: "食物 / 饮料",
         mob: "生物",
         player: "玩家",
+        science: "科学",
         ticket: "票券",
         view: "视图"
     },
@@ -54,6 +55,7 @@ const lang_zho_Hans = {
         math: "数学",
         mob: "生物",
         player: "玩家",
+        science: "科学",
         ticket: "票券",
         view: "视图"
     },
