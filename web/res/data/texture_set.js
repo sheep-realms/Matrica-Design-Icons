@@ -282,7 +282,9 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '22': 'plastic cup',
             '23': 'plastic cup outline',
             '24': 'plastic cup multiple',
-            '25': 'plastic cup multiple outline'
+            '25': 'plastic cup multiple outline',
+            '26': { name: 'blender', tags: ['food'], alias: ['food processor'], added_version: '0.1.3' },
+            '27': { name: 'blender outline', tags: ['food'], alias: ['food processor outline'], added_version: '0.1.3' }
         }
     },
     {
