@@ -80,6 +80,8 @@
     --border-radius-small: 0.25rem;
     --border-radius-middle: 0.5rem;
     --border-radius-large: 0.75rem;
+
+    --calc-scroll-bar-size: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -342,6 +344,10 @@ ul {
 
 .disable-scroll {
     overflow: hidden;
+}
+
+body.disable-scroll {
+    margin-right: var(--calc-scroll-bar-size);
 }
 
 .font-mono {
