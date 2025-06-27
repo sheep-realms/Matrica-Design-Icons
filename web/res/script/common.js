@@ -157,11 +157,22 @@ $(document).ready(function() {
     }, 1500);
 
     $('#search-view').html(MatricaComponent.searchViewSelect());
+
+    const defaultSearchView = localStorageManager.getItem('search_view') || 1;
+    $(`#search-view-select button[data-view="${ defaultSearchView }"]`).click();
+
+    // const sessionLastSearch = String(localStorageManager.getItem('search_text') || '');
+    // if (sessionLastSearch.length > 0) {
+    //     $('#icon-search-input').val(localStorageManager.getItem('search_text'));
+    //     $('#icon-search-input').trigger('input');
+    // }
 });
 
 $(document).on('click', '#search-view-select button', function() {
+    const value = $(this).data('view');
     $('#icon-list').removeClass('view-compact-1 view-compact-2 view-compact-3');
-    $('#icon-list').addClass('view-compact-' + $(this).data('view'));
+    $('#icon-list').addClass('view-compact-' + value);
+    localStorageManager.setItem('search_view', value);
 });
 
 $(document).on('click', '#nav-loading', function() {
@@ -173,10 +184,15 @@ $(document).on('input', '#icon-search-input', function() {
     $('#icon-list').addClass('waiting');
     debunce(() => {
         const searchValue = $(this).val().trim();
-        if (lastSearch === searchValue) return $('#icon-list').removeClass('waiting');;
+        if (lastSearch === searchValue) return $('#icon-list').removeClass('waiting');
         lastSearch = searchValue;
         iconList = matrica.search(searchValue);
         resetIconList();
+        // if (searchValue.length <= 256) {
+        //     localStorageManager.setItem('search_text', searchValue);
+        // } else {
+        //     localStorageManager.setItem('search_text', '');
+        // }
     })();
 });
 
