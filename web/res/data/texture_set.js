@@ -783,10 +783,10 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '39': 'test tube check',
             '3a': 'test tube rack',
             '3b': 'test tube rack empty',
-            '3c': 'alcohol lamp',
-            '3d': 'alcohol lamp outline',
-            '3e': 'alcohol lamp off',
-            '3f': 'alcohol lamp off outline'
+            '3c': { name: 'alcohol burner', alias: ['spirit lamp'] },
+            '3d': { name: 'alcohol burner outline', alias: ['spirit lamp outline'] },
+            '3e': { name: 'alcohol burner off', alias: ['spirit lamp off'] },
+            '3f': { name: 'alcohol burner off outline', alias: ['spirit lamp off outline'] }
         }
     },
     {
