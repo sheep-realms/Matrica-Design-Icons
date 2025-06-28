@@ -57,7 +57,8 @@ const lang_zho_Hans = {
         player: "玩家",
         science: "科学",
         ticket: "票券",
-        view: "视图"
+        view: "视图",
+        weather: "天气"
     },
     detail: {
         added_version: "添加于 v{ver}",

@@ -57,7 +57,8 @@ const lang_eng = {
         player: "Player",
         science: "Science",
         ticket: "Ticket",
-        view: "View"
+        view: "View",
+        weather: "Weather"
     },
     detail: {
         added_version: "Added in v{ver}",

@@ -57,7 +57,8 @@ const lang_zho_Hant_HK = {
         player: "玩家",
         science: "科學",
         ticket: "票券",
-        view: "視圖"
+        view: "視圖",
+        weather: "天氣"
     },
     detail: {
         added_version: "添加於 v{ver}",

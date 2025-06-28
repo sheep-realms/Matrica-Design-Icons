@@ -767,7 +767,26 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '2a': 'test tube',
             '2b': 'test tube off',
             '2c': 'test tube empty',
-            '2d': { name: 'safety goggles', alias: ['safety glasses'] }
+            '2d': { name: 'safety goggles', alias: ['safety glasses'] },
+            '2e': 'atom',
+            '2f': 'atom variant',
+
+            '30': { name: 'aurora', tags: ['weather'], alias: ['northern lights', 'southern lights', 'polar lights'] },
+            '31': 'telescope',
+            '32': 'bottle tonic',
+            '33': 'bottle tonic outline',
+            '34': 'test tube tilt',
+            '35': 'orbit',
+            '36': 'test tube minus',
+            '37': 'test tube plus',
+            '38': 'test tube remove',
+            '39': 'test tube check',
+            '3a': 'test tube rack',
+            '3b': 'test tube rack empty',
+            '3c': 'alcohol lamp',
+            '3d': 'alcohol lamp outline',
+            '3e': 'alcohol lamp off',
+            '3f': 'alcohol lamp off outline'
         }
     },
     {
