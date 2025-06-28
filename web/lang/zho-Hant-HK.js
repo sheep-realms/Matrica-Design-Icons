@@ -72,7 +72,8 @@ const lang_zho_Hant_HK = {
         nav_loading_timeout: "加載導航欄花費了太多時間，點此重載！"
     },
     footer: {
-        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> 和 <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">其他貢獻者們</a>'
+        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> 和 <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">其他貢獻者們</a>',
+        icon_count: "圖標都去哪了？ | 總計 1 個圖標 | 總計 {n} 個圖標"
     }
 };
 

@@ -72,7 +72,8 @@ const lang_zho_Hans = {
         nav_loading_timeout: "加载导航栏花费了太多时间，点此重载！"
     },
     footer: {
-        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> 和 <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">其他贡献者们</a>'
+        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> 和 <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">其他贡献者们</a>',
+        icon_count: "图标都去哪了？ | 总计 1 个图标 | 总计 {n} 个图标"
     }
 };
 

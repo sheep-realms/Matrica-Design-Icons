@@ -72,7 +72,8 @@ const lang_eng = {
         nav_loading_timeout: "The navigation took too much time to load, click here to reload!"
     },
     footer: {
-        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> and <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">other contributors</a>'
+        copyright: '© <a href="https://github.com/sheep-realms" target="_blank">Sheep-realms</a> and <a href="https://github.com/sheep-realms/Matrica-Design-Icons/graphs/contributors" target="_blank">other contributors</a>',
+        icon_count: "Why are all the icons gone? | Total 1 icon | Total of {n} icons"
     }
 };
 
