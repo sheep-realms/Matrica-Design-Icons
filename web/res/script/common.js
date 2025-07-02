@@ -132,6 +132,20 @@ function resetDubunce() {
     debunceTimerDetail.stack = 0;
 }
 
+function isInIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+
+
+if (isInIframe()) $('html').addClass('in-iframe');
+
+
+
 $(document).ready(function() {
     getIconList(0);
     observer.observe(document.getElementById('icon-list-bottom'));
