@@ -8,9 +8,9 @@
 
 class Matrica {
     constructor() {
-        this.textureSet = [];
-        this.icons = [];
-        this.filterConditions = [
+        this.textureSet         = [];
+        this.icons              = [];
+        this.filterConditions   = [
             {
                 name: 'added_version',
                 type: 'version',
@@ -50,14 +50,14 @@ class Matrica {
                 }
             }
         ];
-        this.dataFilter = null;
-        this.fastTag = [];
+        this.dataFilter         = null;
+        this.fastTag            = [];
 
         this.init();
     }
 
     init() {
-        this.fastTag = echoLiveSystem.registry.getRegistryValue('auto_tag', 'fast_tag')?.tags || [];
+        this.fastTag    = echoLiveSystem.registry.getRegistryValue('auto_tag', 'fast_tag')?.tags || [];
         this.load();
         this.dataFilter = new DataFilter('', this.filterConditions, this.icons);
     }
@@ -78,14 +78,14 @@ class Matrica {
 
                     e2 = {
                         ...e2,
-                        unicode: e.unicode_prefix + key,
-                        file: e.file,
-                        pos: {
-                            x: parseInt(key.substring(1,2), 16),
-                            y: parseInt(key.substring(0,1), 16)
+                        unicode:        e.unicode_prefix + key,
+                        file:           e.file,
+                        pos:            {
+                            x: parseInt(key.substring(1, 2), 16),
+                            y: parseInt(key.substring(0, 1), 16)
                         },
-                        added_version: e2.added_version || e.added_version,
-                        font_name: e2.font_name || e.file.split('.')[0]
+                        added_version:  e2.added_version || e.added_version,
+                        font_name:      e2.font_name || e.file.split('.')[0]
                     }
 
                     if (Array.isArray(e?.tags)) {
@@ -155,9 +155,9 @@ class Matrica {
      * @returns {boolean} - 是否匹配到完整的单词
      */
     containsWholeWord(text, word, ignoreCase = false) {
-        const escapedWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const flags = ignoreCase ? 'gi' : 'g';
-        const regex = new RegExp(`\\b${escapedWord}\\b`, flags);
+        const escapedWord   = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const flags         = ignoreCase ? 'gi' : 'g';
+        const regex         = new RegExp(`\\b${escapedWord}\\b`, flags);
         return regex.test(text);
     }
 }
@@ -167,10 +167,10 @@ class Matrica {
 class MatricaComponent {
     static iconBox(icon = {}, options = {}) {
         icon = {
-            name: 'missingno',
-            unicode: 'e000',
-            file: 'missingno.png',
-            pos: {
+            name:       'missingno',
+            unicode:    'e000',
+            file:       'missingno.png',
+            pos:        {
                 x: 0,
                 y: 0,
                 ...icon.pos
@@ -211,17 +211,17 @@ class MatricaComponent {
     static navItem(navItem) {
         if (typeof navItem === 'string') {
             navItem = {
-                name: navItem,
-                tag: navItem
+                name:   navItem,
+                tag:    navItem
             }
         }
         navItem = {
-            name: 'missingno',
-            name_var: {},
-            type: 'item',
-            tag: 'missingno',
-            icon: 'material:tag-outline',
-            search: undefined,
+            name:       'missingno',
+            name_var:   {},
+            type:       'item',
+            tag:        'missingno',
+            icon:       'material:tag-outline',
+            search:     undefined,
             ...navItem
         };
 
