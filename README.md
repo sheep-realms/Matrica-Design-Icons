@@ -22,6 +22,13 @@
 您可以访问本项目的[在线网页](https://sheep-realms.github.io/Matrica-Design-Icons/)或在浏览器中打开资源包随附的 `index.html` 文件即可浏览所有可用图标。
 
 
+## 构建方法
+
+1. Fork 此仓库，或者别的什么能让您执行工作流的方法。
+2. 前往仓库的 Actions 页面，手动执行 Matrica Design Icons Build（build.yml）工作流。
+3. 等待工作流执行完毕，在工作流详情里的 Artifacts 中下载产物。
+
+
 ## 另见
 
 - [授权协议与声明](copyright.md)
