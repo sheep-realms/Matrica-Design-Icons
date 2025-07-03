@@ -29,6 +29,30 @@
 3. 等待工作流执行完毕，在工作流详情里的 Artifacts 中下载产物。
 
 
+## 主要结构
+
+``` text
+assets/ - 资源包资产文件
+web/ - 图标查询工具资产
+├ assets/ - 美术资产
+├ lang/ - 本地化
+├ lib/ - 前置库
+└ res/ - 网页核心资产
+  ├ class/ - 类
+  ├ data/ - 注册表
+  │ ├ auto_tag.js - 自动标签
+  │ ├ icon.js - 前端图标
+  │ ├ root.js - 根注册表
+  │ └ texture_set.js - 图标纹理图集
+  ├ script/ - 脚本
+  └ style/ - 样式表
+app.js - 图标查询工具版本元数据
+pack-dev.png - 资源包图标（DEV）
+pack.mcmeta - 资源包元数据
+pack.png - 资源包图标
+```
+
+
 ## 另见
 
 - [授权协议与声明](copyright.md)
