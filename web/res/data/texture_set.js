@@ -12,8 +12,8 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '05': 'furnace outline',
             '06': 'chest',
             '07': 'chest outline',
-            '08': 'tnt',
-            '09': 'tnt outline',
+            '08': { name: 'tnt', tags: ['weapon'] },
+            '09': { name: 'tnt outline', tags: ['weapon'] },
             '0a': 'block bricks',
             '0b': 'block bricks outline'
         }
@@ -671,7 +671,20 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '1c': 'gamepad circle down',
             '1d': 'gamepad circle left',
             '1e': 'gamepad circle right',
-            '1f': 'gamepad circle up'
+            '1f': 'gamepad circle up',
+
+            '20': 'bottle tonic plus',
+            '21': 'bottle tonic plus outline',
+            '22': 'bottle tonic skull',
+            '23': 'bottle tonic skull outline',
+            '24': { name: 'arrow projectile', tags: ['weapon'] },
+            '25': { name: 'arrow projectile multiple', tags: ['weapon'] },
+            '26': { name: 'bomb', tags: ['weapon'] },
+            '27': { name: 'bomb off', tags: ['weapon'] },
+            '28': { name: 'sword', tags: ['weapon'] },
+            '29': { name: 'sword cross', tags: ['weapon'] },
+            '2a': { name: 'magic staff', tags: ['weapon'] },
+            '2b': { name: 'spear', tags: ['weapon'] }
         }
     },
     {

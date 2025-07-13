@@ -165,6 +165,7 @@ $(document).ready(function() {
         $('nav').html(MatricaComponent.nav(navItem));
         $('body').append(MatricaComponent.iconDetailDialog());
         $('#footer-copyright').html($t('footer.copyright'));
+        $('#icon-count').text($t('footer.icon_count', { n: matrica.icons.length }));
     });
     
     setTimeout(() => {
@@ -181,8 +182,6 @@ $(document).ready(function() {
     //     $('#icon-search-input').val(localStorageManager.getItem('search_text'));
     //     $('#icon-search-input').trigger('input');
     // }
-
-    $('#icon-count').text($t('footer.icon_count', { n: matrica.icons.length }));
 });
 
 $(document).on('click', '#search-view-select button', function() {

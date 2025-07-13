@@ -60,6 +60,7 @@ const lang_zho_Hans = {
         science: "科学",
         ticket: "票券",
         view: "视图",
+        weapon: "武器",
         weather: "天气"
     },
     detail: {

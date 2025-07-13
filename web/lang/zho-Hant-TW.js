@@ -60,6 +60,7 @@ const lang_zho_Hant_TW = {
         science: "科學",
         ticket: "票券",
         view: "檢視",
+        weapon: "武器",
         weather: "天氣"
     },
     detail: {

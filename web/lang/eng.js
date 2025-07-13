@@ -60,6 +60,7 @@ const lang_eng = {
         science: "Science",
         ticket: "Ticket",
         view: "View",
+        weapon: "Weapon",
         weather: "Weather"
     },
     detail: {
