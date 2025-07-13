@@ -635,6 +635,40 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
         }
     },
     {
+        file: 'gaming.png',
+        added_version: '0.1.3',
+        tags: ['gaming'],
+        chars: {
+            '00': 'dice 1',
+            '01': 'dice 1 outline',
+            '02': 'dice 2',
+            '03': 'dice 2 outline',
+            '04': 'dice 3',
+            '05': 'dice 3 outline',
+            '06': 'dice 4',
+            '07': 'dice 4 outline',
+            '08': 'dice 5',
+            '09': 'dice 5 outline',
+            '0a': 'dice 6',
+            '0b': 'dice 6 outline',
+            '0c': 'dice multiple',
+            '0d': 'dice multiple outline',
+            '0e': 'gamepad',
+            '0f': 'gamepad outline',
+
+            '10': 'gamepad down',
+            '11': 'gamepad left',
+            '12': 'gamepad right',
+            '13': 'gamepad up',
+            '14': 'gamepad round',
+            '15': 'gamepad round outline',
+            '16': 'gamepad round down',
+            '17': 'gamepad round left',
+            '18': 'gamepad round right',
+            '19': 'gamepad round up'
+        }
+    },
+    {
         file: 'mob.png',
         added_version: '0.1.1',
         tags: ['mob'],

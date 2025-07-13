@@ -68,6 +68,7 @@ const navItem = [
         name: 'food',
         tag: 'food,drink'
     },
+    'gaming',
     'mob',
     'player',
     'science',
