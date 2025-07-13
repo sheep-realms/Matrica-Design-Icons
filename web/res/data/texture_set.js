@@ -169,8 +169,8 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '87': 'sim outline',
             '88': 'sim alert',
             '89': 'sim alert outline',
-            '8a': 'expansion card',
-            '8b': 'expansion card variant',
+            '8a': { name: 'expansion card', tags: ['gaming'] },
+            '8b': { name: 'expansion card variant', tags: ['gaming'] },
             '8c': 'credit card wireless',
             '8d': 'credit card wireless outline',
             '8e': 'credit card wireless off',
@@ -665,7 +665,13 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '16': 'gamepad round down',
             '17': 'gamepad round left',
             '18': 'gamepad round right',
-            '19': 'gamepad round up'
+            '19': 'gamepad round up',
+            '1a': 'gamepad circle',
+            '1b': 'gamepad circle outline',
+            '1c': 'gamepad circle down',
+            '1d': 'gamepad circle left',
+            '1e': 'gamepad circle right',
+            '1f': 'gamepad circle up'
         }
     },
     {
@@ -777,8 +783,8 @@ echoLiveSystem.registry.loadRegistry('texture_set', 'file', [
             '13': 'eyedropper remove',
             '14': 'eyedropper check',
             '15': 'eyedropper off',
-            '16': 'flask',
-            '17': 'flask outline',
+            '16': { name: 'flask', tags: ['gaming'] },
+            '17': { name: 'flask outline', tags: ['gaming'] },
             '18': 'flask minus',
             '19': 'flask minus outline',
             '1a': 'flask plus',
