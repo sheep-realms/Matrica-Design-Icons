@@ -58,6 +58,7 @@ const lang_eng = {
         mob: "Mob",
         player: "Player",
         science: "Science",
+        sport: "Sport",
         ticket: "Ticket",
         view: "View",
         weapon: "Weapon",

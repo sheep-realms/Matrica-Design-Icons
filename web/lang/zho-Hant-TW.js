@@ -58,6 +58,7 @@ const lang_zho_Hant_TW = {
         mob: "生物",
         player: "玩家",
         science: "科學",
+        sport: "運動",
         ticket: "票券",
         view: "檢視",
         weapon: "武器",

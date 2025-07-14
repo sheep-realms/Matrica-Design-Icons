@@ -58,6 +58,7 @@ const lang_zho_Hans = {
         mob: "生物",
         player: "玩家",
         science: "科学",
+        sport: "运动",
         ticket: "票券",
         view: "视图",
         weapon: "武器",
